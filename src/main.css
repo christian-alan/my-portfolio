@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --humana: linear-gradient(
+    to right,
+    #c463a7 0%,
+    #ed6d60 25%,
+    #ebba65 50%,
+    #d4adb2 75%,
+    #7eb9cf 100%
+  );
+  --glass-background: blur(4px);
+  --border-light: linear-gradient(
+    to right,
+    #00000010 0%,
+    #00000080 50%,
+    #00000010 100%
+  );
+}
+
+@layer base {
+  ul {
+    @apply font-raleway;
+  }
+
+  h1 {
+    @apply desktop:text-6xl smalldesktop:text-5xl tablet:text-4xl mobile:text-3xl font-playfair font-extrabold;
+  }
+  h2 {
+    @apply text-4xl font-playfair;
+  }
+  h3 {
+    @apply text-3xl font-playfair;
+  }
+  h4 {
+    @apply text-2xl font-playfair;
+  }
+  h5 {
+    @apply text-xl font-raleway font-bold;
+  }
+  p {
+    @apply text-xl font-raleway font-medium;
+  }
+  nav {
+    @apply mx-24;
+  }
+  .common-container {
+    @apply mx-60;
+  }
+  .noise-bg {
+    background: url("./assets/Noise.png");
+  }
+
+  .img-blob {
+    @apply object-cover rounded-xl w-full;
+    height: 700px;
+    box-shadow: 0px 5px 36px #2f303930;
+  }
+
+  .divider-light {
+    @apply w-full;
+    background-image: var(--border-light);
+    height: 0.5px;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  .role-underline {
+  }
+
+  .role-underline::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 3px;
+    border-radius: 2px;
+    background-image: var(--humana);
+  }
+
+  .blog-container {
+    @apply desktop:mx-64 smalldesktop:mx-36;
+  }
+
+  .cowrite-shadow {
+    box-shadow: 0px 4px 44px #8bda9124;
+  }
+}
+@layer components {
+  .humana-gradient {
+    background-image: var(--humana);
+  }
+  .boe-gif {
+    background-image: url("./assets/Bogan.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .nav-bar {
+    @apply px-6 py-3 relative flex justify-center items-center;
+    border-radius: 1000px;
+    backdrop-filter: var(--glass-background);
+    border-radius: 1000px;
+  }
+  .nav-bar:before {
+    @apply bg-light;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 1000px;
+    z-index: -1;
+  }
+  .nav-bar:after {
+    content: "";
+    position: absolute;
+    height: 107%;
+    width: 101.5%;
+    border-radius: 1000px;
+    background-image: var(--humana);
+    z-index: -2;
+  }
+
+  /* Principle boxes */
+  .principle-box {
+    @apply relative flex justify-center items-center;
+    background-color: white;
+    height: 120px;
+    width: 120px;
+    border-radius: 36px;
+  }
+
+  .principle-box:after {
+    content: "";
+    position: absolute;
+    height: 102%;
+    width: 102%;
+    border-radius: 36px;
+    background-image: var(--humana);
+    z-index: -1;
+  }
+}
+@layer utilities {
+}

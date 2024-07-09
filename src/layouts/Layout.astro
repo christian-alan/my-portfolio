@@ -1,0 +1,61 @@
+---
+import "./../main.css";
+import Nav from "../components/Nav.astro";
+import { Image } from "astro:assets";
+import EllipseOne from "../assets/background/Ellipse_one.png";
+import EllipseTwo from "../assets/background/Ellipse_two.png";
+import EllipseThree from "../assets/background/Ellipse_three.png";
+import EllipseFour from "../assets/background/Ellipse_four.png";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body
+    id="portfolio-body"
+    class="noise-bg w-screen h-screen relative overflow-x-clip"
+  >
+    <Image class="absolute -left-44" src={EllipseOne} alt="Decore" />
+    <Image
+      class="absolute -left-44"
+      style={{ bottom: "-180rem" }}
+      src={EllipseTwo}
+      alt="Decore"
+    />
+    <Image class="absolute -right-44" src={EllipseThree} alt="Decore" />
+    <Image
+      class="absolute -right-64"
+      style={{ bottom: "-100rem" }}
+      src={EllipseFour}
+      alt="Decore"
+    />
+
+    <div class="px-auto fixed w-full z-10">
+      <Nav />
+    </div>
+    <slot />
+  </body>
+</html>
+
+<script>
+  const body = document.getElementById("portfolio-body");
+
+  if (window.location.pathname === "/") {
+    body.style.backgroundColor = "#FDFBF6";
+  } else if (window.location.pathname === "/cowrite/") {
+    body.style.backgroundColor = "#F4FBF4";
+  }
+</script>

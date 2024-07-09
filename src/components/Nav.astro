@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import LogoImg from "../assets/Logo.svg";
+import MoonIcon from "../assets/icons/Moon.svg";
+---
+
+<nav class="flex justify-center font-raleway py-6">
+  <ul class="flex gap-10 nav-bar">
+    <a href="/">
+      <Image
+        src={LogoImg}
+        alt="Logo of the website"
+        data-astro-cid-dmqpwcec="true"
+      />
+    </a>
+    <li><a id="home-link" class="nav-link text-base" href="/">Design</a></li>
+    <li><a id="code-link" class="nav-link text-base" href="/code/">Code</a></li>
+    <li>
+      <a id="about-link" class="nav-link text-base" href="/about/">About me</a>
+    </li>
+    <button class="rounded-full p-3 bg-dark">
+      <Image src={MoonIcon} alt="Moon Logo" data-astro-cid-dmqpwcec="true" />
+    </button>
+  </ul>
+</nav>
+
+<script>
+  const homeLink = document.getElementById("home-link");
+  const codeLink = document.getElementById("code-link");
+  const aboutLink = document.getElementById("about-link");
+
+  if (window.location.pathname === "/") homeLink.style.fontWeight = "bold";
+  if (window.location.pathname === "/cowrite/") homeLink.style.fontWeight = "bold";
+  if (window.location.pathname === "/furhat/") homeLink.style.fontWeight = "bold";
+  if (window.location.pathname === "/code/") codeLink.style.fontWeight = "bold";
+  if (window.location.pathname === "/about/")
+    aboutLink.style.fontWeight = "bold";
+</script>
