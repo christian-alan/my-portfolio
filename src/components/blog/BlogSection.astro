@@ -1,0 +1,41 @@
+---
+import { map } from "astro/zod";
+import { Image } from "astro:assets";
+const { title, subtitle, description, images,bullets } = Astro.props;
+---
+
+<div class="flex gap-4 flex-col blog-container">
+  {
+    title ? (
+      <div class="flex flex-row items-center gap-5">
+        <h3 class="font-bold text-dark">{title}</h3>
+        <div class="h-0.5 w-32 bg-dark" />
+      </div>
+    ) : (
+      ""
+    )
+  }
+  {subtitle ? <p class="font-bold text-dark opacity-80">{subtitle}</p> : ""}
+  {description ? <p class="opacity-80 text-dark">{description}</p> : ""}
+  {bullets ? <ol> {bullets ?  bullets.map((bullet)=>(<li class="opacity-80 ml-5 text-dark">{bullet}</li>)) : ""}</ol> :''}
+</div>
+{
+  images
+    ? images.map((image) => (
+        <Image
+          src={image}
+          class="cowrite-shadow rounded-xl scale-90"
+          alt="Cowrite Hero"
+        />
+      ))
+    : ""
+}
+
+
+<style>
+  ol{
+    list-style-position: outside;
+    list-style: lower-alpha;
+
+  }
+</style>

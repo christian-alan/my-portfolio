@@ -14,6 +14,7 @@ import IA from "../assets/cowrite/IA.jpg";
 import Problems from "../assets/cowrite/Problem.jpg";
 import Footer from "../components/Footer.astro";
 import Component from "../assets/cowrite/Components.jpg";
+import BlogSection from "../components/blog/BlogSection.astro";
 ---
 
 <Layout title="Alan Christian">
@@ -100,74 +101,44 @@ import Component from "../assets/cowrite/Components.jpg";
       </ul>
     </div>
 
+    
     <!-- Overview section -->
     <section id="overview" class="flex flex-col">
-      <!-- Header -->
-      <div class="flex gap-4 flex-col blog-container">
-        <!-- Header -->
-        <div class="flex flex-row items-center gap-5">
-          <h3 class="font-bold text-dark">Overview</h3>
-          <div class="h-0.5 w-32 bg-dark"></div>
-        </div>
-        <p class="opacity-80 text-dark">
-          Fave is one of Southeast Asia's fintech startup that helps consumers
+      <BlogSection
+        title="Overview"
+        description=`Fave is one of Southeast Asia's fintech startup that helps consumers
           save, while empowering small and medium-sized enterprises to grow in
           the digital economy. Fave's key offering includes cashless payments,
           online/offline deals and other offers. Fave has been acquired by
           PineLabs, an India-based unicorn on April 2021. In this project, we
           revamped the user experience and redesigned the UI, which is one of
-          the largest projects at Fave since 2019.
-        </p>
-      </div>
+          the largest projects at Fave since 2019.`
+      />
     </section>
 
     <!-- Users section -->
     <section id="users" class="flex flex-col mt-16">
-      <!-- Header -->
-      <div class="flex gap-4 flex-col blog-container">
-        <!-- Header -->
-        <div class="flex flex-row items-center gap-5">
-          <h3 class="font-bold text-dark">Users</h3>
-          <div class="h-0.5 w-32 bg-dark"></div>
-        </div>
-        <p class="font-bold text-dark opacity-80">Personas</p>
-        <p class="opacity-80 text-dark">
-          Through meetings and discussions with the founders, we identified the
+      <BlogSection
+        title="Users"
+        subtitle="Personas"
+        description=`Through meetings and discussions with the founders, we identified the
           4 types of job seeker who cowrite could target as a smart job
           application building tool. They are, Emily - a 22 years old recent
           graduate, James - a 36 years old mid career professional, Linda - a 40
           years old career changer and Sarah - a 32 years old the returnee to
-          the workforce.
-        </p>
-      </div>
-      <!-- Hero image -->
-      <Image
-        src={Persona}
-        class="cowrite-shadow rounded-xl scale-90"
-        alt="Cowrite Hero"
+          the workforce.`
+        images={[Persona]}
       />
     </section>
 
     <!-- Problems -->
     <section id="problems" class="flex flex-col">
-      <!-- Header -->
-      <div class="flex gap-4 flex-col blog-container">
-        <!-- Header -->
-        <div class="flex flex-row items-center gap-5">
-          <h3 class="font-bold text-dark">Problems</h3>
-          <div class="h-0.5 w-32 bg-dark"></div>
-        </div>
-        <p class="opacity-80 text-dark">
-          On analysing the users discussed above and understanding their
+      <BlogSection
+        title="Problems"
+        description=` On analysing the users discussed above and understanding their
           challenges, we identified four key challenges that the product could
-          address.
-        </p>
-      </div>
-      <!-- Hero image -->
-      <Image
-        src={Problems}
-        class="cowrite-shadow rounded-xl scale-90"
-        alt="Cowrite Hero"
+          address.`
+        images={[Problems]}
       />
     </section>
 
@@ -175,155 +146,75 @@ import Component from "../assets/cowrite/Components.jpg";
 
     <!-- IA -->
     <section id="ia" class="flex flex-col">
-      <!-- Header -->
-      <div class="flex gap-4 flex-col blog-container">
-        <!-- Header -->
-        <div class="flex flex-row items-center gap-5">
-          <h3 class="font-bold text-dark">Information Architecture</h3>
-		  <div class="h-0.5 w-32 bg-dark"></div>
-        </div>
-		<p class="opacity-80 text-dark">
-			To optimize internal operations, we will build scalable design
-			components, which will work across FavePay, Deals & eCards.
-		  </p>  
-	</div>
-      <!-- Hero image -->
-      <Image
-        src={IA}
-        class="cowrite-shadow rounded-xl scale-90"
-        alt="Cowrite Hero"
+      <BlogSection
+        title="Information Architecture"
+        description=` To optimize internal operations, we will build scalable design
+			components, which will work across FavePay, Deals & eCards.`
+        images={[IA]}
       />
     </section>
 
     <!-- Wireframes -->
     <section id="wireframes" class="flex flex-col">
-      <!-- Header -->
-      <div class="flex gap-4 flex-col blog-container">
-        <!-- Header -->
-        <div class="flex flex-row items-center gap-5">
-          <h3 class="font-bold text-dark">Wireframes</h3>
-          <div class="h-0.5 w-32 bg-dark"></div>
-        </div>
-        <p class="font-bold text-dark opacity-80">
-          Strengthen the value proposition of core products
-        </p>
-        <p class="opacity-80 text-dark">
-          With new products introduced, we want to highlight our core product
+      <BlogSection
+        title="Wireframes"
+        subtitle="Strengthen the value proposition of core products"
+        description=`With new products introduced, we want to highlight our core product
           offerings that go beyond Deals. We aim to allow a habit-building &
           fast payment experience for our consumers, while strengthening product
-          discovery on the app.
-        </p>
-      </div>
-      <!-- Image -->
-      <Image
-        src={Wireframe}
-        class="cowrite-shadow rounded-xl scale-90"
-        alt="Cowrite Hero"
+          discovery on the app.`
+        images={[Wireframe]}
       />
     </section>
 
     <!-- Prototype Section  -->
     <section id="prototype" class="flex flex-col">
-      <!-- Header -->
-      <div class="flex gap-4 flex-col blog-container">
-        <div class="flex flex-row items-center gap-5">
-          <h3 class="font-bold text-dark">Prototype</h3>
-          <div class="h-0.5 w-32 bg-dark"></div>
-        </div>
-      </div>
+      <BlogSection title="Prototype" />
     </section>
 
     <!-- Prototype Section One -->
     <section id="prototype-one" class="flex flex-col mt-5">
-      <!-- Header -->
-      <div class="flex gap-4 flex-col blog-container">
-        <p class="font-bold text-dark opacity-80">Design System</p>
-        <p class="opacity-80 text-dark">
-          With new products introduced, we want to highlight our core product
+      <BlogSection
+        subtitle="Design System"
+        description=`With new products introduced, we want to highlight our core product
           offerings that go beyond Deals. We aim to allow a habit-building &
           fast payment experience for our consumers, while strengthening product
-          discovery on the app.
-        </p>
-      </div>
-
-      <!-- Hero image -->
-      <Image
-        src={Component}
-        class="cowrite-shadow rounded-xl scale-90"
-        alt="Cowrite Hero"
+          discovery on the app.`
+        images={[Component]}
       />
     </section>
 
     <!-- Prototype Section Two -->
     <section id="prototype-two" class="flex flex-col">
-      <div class="flex gap-4 flex-col blog-container">
-        <p class="font-bold text-dark opacity-80">Cover letter builder</p>
-        <p class="opacity-80 text-dark">
-          With new products introduced, we want to highlight our core product
+      <BlogSection
+        subtitle="Cover letter builder"
+        description=` With new products introduced, we want to highlight our core product
           offerings that go beyond Deals. We aim to allow a habit-building &
           fast payment experience for our consumers, while strengthening product
-          discovery on the app.
-        </p>
-      </div>
-      <!-- Hero image -->
-      <Image
-        src={PrototypeOne}
-        class="cowrite-shadow rounded-xl scale-90"
-        alt="Cowrite Hero"
-      />
-      <Image
-        src={PrototypeTwo}
-        class="cowrite-shadow rounded-xl scale-90"
-        alt="Cowrite Hero"
+          discovery on the app.`
+        images={[PrototypeOne, PrototypeTwo]}
       />
     </section>
 
     <!-- Prototype Section Three -->
     <section id="prototype-three" class="flex flex-col">
-      <!-- Header -->
-      <div class="flex gap-4 flex-col blog-container">
-        <p class="font-bold text-dark opacity-80">Resume builder</p>
-        <p class="opacity-80 text-dark">
-          To optimize internal operations, we will build scalable design
-          components, which will work across FavePay, Deals & eCards.
-        </p>
-      </div>
-      <!-- Hero image -->
-      <Image
-        src={PrototypeThree}
-        class="cowrite-shadow rounded-xl scale-90"
-        alt="Cowrite Hero"
-      />
-      <Image
-        src={PrototypeFour}
-        class="cowrite-shadow rounded-xl scale-90"
-        alt="Cowrite Hero"
+      <BlogSection
+        subtitle="Resume builder"
+        description=`To optimize internal operations, we will build scalable design
+          components, which will work across FavePay, Deals & eCards.`
+        images={[PrototypeThree, PrototypeFour]}
       />
     </section>
 
-	  <!-- Prototype Section four -->
-	  <section id="prototype-four" class="flex flex-col">
-		<!-- Header -->
-		<div class="flex gap-4 flex-col blog-container">
-		  <p class="font-bold text-dark opacity-80">Mobile view</p>
-		  <p class="opacity-80 text-dark">
-			To optimize internal operations, we will build scalable design
-			components, which will work across FavePay, Deals & eCards.
-		  </p>
-		</div>
-		<!-- Hero image -->
-		<Image
-		  src={PrototypeFive}
-		  class="cowrite-shadow rounded-xl scale-90"
-		  alt="Cowrite Hero"
-		/>
-		<Image
-		  src={PrototypeSix}
-		  class="cowrite-shadow rounded-xl scale-90"
-		  alt="Cowrite Hero"
-		/>
-		
-	  </section>
+    <!-- Prototype Section four -->
+    <section id="prototype-four" class="flex flex-col">
+      <BlogSection
+        subtitle="Mobile view"
+        description=`To optimize internal operations, we will build scalable design
+        components, which will work across FavePay, Deals & eCards.`
+        images={[PrototypeFive, PrototypeSix]}
+      />
+    </section>
 
     <div class="divider-light my-16"></div>
 
