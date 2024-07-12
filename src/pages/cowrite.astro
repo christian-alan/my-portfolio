@@ -22,8 +22,8 @@ import BlogSection from "../components/blog/BlogSection.astro";
     <!-- Hero section -->
     <section
       class="
-      desktop:pt-80 desktop:flex desktop:items-center  desktop:flex-row
-      smalldesktop:pt-80 smalldesktop:flex smalldesktop:items-center smalldesktop:flex-row
+      desktop:pt-80 desktop:flex desktop:items-center desktop:flex-col
+      smalldesktop:pt-80 smalldesktop:flex smalldesktop:items-center smalldesktop:flex-col
       tablet:pt-60 tablet:flex table:flex-col tablet:items-center 
       mobile:pt-60 mobile:flex mobile:flex-col mobile:items-center
       "
@@ -49,18 +49,18 @@ import BlogSection from "../components/blog/BlogSection.astro";
 
       <div class="divider-light my-16"></div>
       <!-- Project meta data -->
-      <div class="
-        desktop:grid-cols-3 desktop:grid desktop:gap-5 desktop:text-dark desktop:blog-container
-        smalldesktop:grid-cols-3 smalldesktop:grid smalldesktop:gap-5 smalldesktop:text-dark smalldesktop:blog-container
-        tablet:flex tablet:flex-col tablet:justify-center tablet:items-center tablet:gap-10 tablet:text-dark tablet:blog-container
-        mobile:flex mobile:flex-col mobile:justify-center mobile:items-center mobile:gap-10 mobile:text-dark mobile:blog-container
-      ">
+      <div class=" 
+      desktop:grid-cols-3 desktop:grid desktop:gap-5 desktop:text-dark desktop:blog-container desktop:items-baseline
+      smalldesktop:grid-cols-3 smalldesktop:grid smalldesktop:gap-5 smalldesktop:text-dark smalldesktop:blog-container smalldesktop:items-baseline
+      tablet:flex tablet:flex-col tablet:justify-center tablet:items-center tablet:gap-10 tablet:text-dark tablet:blog-container
+      mobile:flex mobile:flex-col mobile:justify-center mobile:items-center mobile:gap-10 mobile:text-dark mobile:blog-container
+    ">
         <div class="
           desktop:flex desktop:flex-col desktop:items-start
           smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start
           tablet:flex tablet:flex-col tablet:justify-center tablet:items-center
           mobile:flex mobile:flex-col mobile:justify-center mobile:items-center
-        ">
+      ">
           <h4 class="font-bold mb-4">Roles & responsibilities</h4>
           <p class="">UX Design</p>
           <p class="">UI Design</p>
@@ -68,22 +68,22 @@ import BlogSection from "../components/blog/BlogSection.astro";
         </div>
         <div
         class="
-          desktop:flex desktop:flex-col desktop:items-start
-          smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start
-          tablet:flex tablet:flex-col tablet:justify-center tablet:items-center
-          mobile:flex mobile:flex-col mobile:justify-center mobile:items-center
-        ">
+        desktop:flex desktop:flex-col desktop:items-center
+        smalldesktop:flex smalldesktop:flex-col smalldesktop:items-center
+        tablet:flex tablet:flex-col tablet:justify-center tablet:items-center
+        mobile:flex mobile:flex-col mobile:justify-center mobile:items-center
+      ">
           <h4 class="font-bold text-center mb-4">Project context</h4>
           <p class="text-center">Oct 2021 - Mar 2023</p>
           <p class="text-center">UX consultant</p>
         </div>
         <div
         class="
-          desktop:flex desktop:flex-col desktop:items-start
-          smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start
-          tablet:flex tablet:flex-col tablet:justify-center tablet:items-center
-          mobile:flex mobile:flex-col mobile:justify-center mobile:items-center
-        ">
+        desktop:flex desktop:flex-col desktop:items-end
+        smalldesktop:flex smalldesktop:flex-col smalldesktop:items-end
+        tablet:flex tablet:flex-col tablet:justify-center tablet:items-center
+        mobile:flex mobile:flex-col mobile:justify-center mobile:items-center
+      ">
           <h4 class="font-bold text-right mb-4">Tools used</h4>
           <p class="text-right">Figma</p>
           <p class="text-right">Vue.js</p>
