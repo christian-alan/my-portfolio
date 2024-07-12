@@ -3,7 +3,11 @@ import { Image } from "astro:assets";
 import LogoImg from "../assets/Logo.svg";
 import MoonIcon from "../assets/icons/Moon.svg";
 ---
-<nav class="flex justify-center font-raleway py-6">
+<nav class="desktop:flex desktop:justify-center desktop:font-raleway desktop:py-6
+smalldesktop:flex smalldesktop:justify-center smalldesktop:font-raleway smalldesktop:py-6
+tablet:flex tablet:justify-center tablet:font-raleway tablet:py-6
+mobile:flex mobile:w-full mobile:justify-center mobile:font-raleway mobile:py-6
+">
   <ul class="flex gap-10 nav-bar">
     <a href="/">
       <Image
