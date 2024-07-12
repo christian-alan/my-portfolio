@@ -101,8 +101,18 @@ import Wireframe from "../assets/furhat/Wireframe.jpg";
     <div class="divider-light my-16"></div>
 
     <!-- Section jumps -->
-    <div class="sticky top-20 -inset-20 z-10 flex">
-      <ul class="flex absolute -left-52 text-sm flex-col gap-2 text-dark">
+    <div class="
+      desktop:sticky desktop:top-20 desktop:-inset-20 desktop:z-10 desktop:flex
+      smalldesktop:sticky smalldesktop:top-20 smalldesktop:-inset-20 smalldesktop:z-10 smalldesktop:flex
+      tablet:sticky tablet:top-20 tablet:-inset-20 tablet:z-10 tablet:hidden
+      mobile:sticky mobile:top-20 mobile:-inset-20 mobile:z-10 mobile:hidden
+      ">
+      <ul class="
+        desktop:flex desktop:absolute desktop:-left-52 desktop:text-sm desktop:flex-col desktop:gap-2 desktop:text-dark
+        smalldesktop:flex smalldesktop:absolute smalldesktop:-left-44 smalldesktop:text-sm smalldesktop:flex-col smalldesktop:gap-2 smalldesktop:text-dark
+        
+        
+        ">
         <li class="font-bold leading-10 tracking-widest">TABLE OF CONTENTS</li>
         <li><a href="#overview">Overview</a></li>
         <li><a href="#usecase">Usecase</a></li>
@@ -235,7 +245,7 @@ import Wireframe from "../assets/furhat/Wireframe.jpg";
     </section>
 
     <!-- Prototype: reader  -->
-    <section id="Reader" class="flex flex-col">
+    <section id="reader" class="flex flex-col">
       <BlogSection 
       subtitle="Dialogue reader component" 
       bullets={[
