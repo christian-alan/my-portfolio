@@ -45,7 +45,8 @@ import FurhatCover from "../assets/furhat/Index.jpg";
 		</p>
       </div>
       <div
-        class="boe-gif 
+        class="
+        boe-gif 
         desktop:w-1/4 desktop:absolute desktop:top-64 desktop:right-0 desktop:h-96 
         smalldesktop:absolute smalldesktop:right-0 smalldesktop:top-32 smalldesktop:w-1/4 smalldesktop:h-96
         tablet:w-1/2 tablet:h-72 tablet:mx-auto
@@ -183,14 +184,22 @@ import FurhatCover from "../assets/furhat/Index.jpg";
       ">
         <Image
           id="cowrite"
-          class="col-span-2 img-blob cursor-pointer"
+          class=`desktop:col-span-1 desktop:img-blob desktop:cursor-pointer
+          smalldesktop:col-span-1 smalldesktop:img-blob smalldesktop:cursor-pointer
+          tablet:w-full tablet:img-blob tablet:cursor-pointer
+          mobile:w-full mobile:img-blob mobile:cursor-pointer
+          `
           src={CowriteCover}
           alt="cowrite's placeholder"
           style="transition-duration:0.4s"
         />
         <Image
           id="furhat"
-          class="col-span-1 img-blob cursor-pointer"
+          class=`desktop:col-span-1 desktop:img-blob desktop:cursor-pointer
+          smalldesktop:col-span-1 smalldesktop:img-blob smalldesktop:cursor-pointer
+          tablet:w-full tablet:img-blob tablet:cursor-pointer
+          mobile:w-full mobile:img-blob mobile:cursor-pointer
+          `
           src={FurhatCover}
           alt="furhat's placeholder"
            style="transition-duration:0.2s"

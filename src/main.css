@@ -62,6 +62,9 @@
     box-shadow: 0px 5px 36px #2f303930;
   }
 
+  
+
+
   .divider-light {
     @apply w-full;
     background-image: var(--border-light);
