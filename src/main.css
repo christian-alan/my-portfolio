@@ -24,6 +24,10 @@
 }
 
 @layer base {
+
+  a{
+    @apply desktop:text-xl smalldesktop:text-xl tablet:text-xl mobile:text-sm;
+  }
   ul {
     @apply font-raleway;
   }
@@ -62,7 +66,7 @@
     box-shadow: 0px 5px 36px #2f303930;
   }
 
-  
+
 
 
   .divider-light {
@@ -81,7 +85,7 @@
   }
 
   .blog-container {
-    @apply desktop:mx-64 smalldesktop:mx-36 tablet:mx-20 mobile:mx-10;
+    @apply desktop:mx-64 smalldesktop:mx-36 tablet:mx-20 mobile:mx-0;
   }
 
   .cowrite-shadow {
