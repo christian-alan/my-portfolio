@@ -29,7 +29,7 @@
   }
 
   h1 {
-    @apply desktop:text-6xl smalldesktop:text-5xl tablet:text-4xl mobile:text-3xl font-playfair font-extrabold;
+    @apply desktop:text-6xl smalldesktop:text-5xl tablet:text-4xl mobile:text-4xl font-playfair font-extrabold;
   }
   h2 {
     @apply text-4xl font-playfair;
@@ -44,13 +44,13 @@
     @apply text-xl font-raleway font-bold;
   }
   p {
-    @apply text-xl font-raleway font-medium;
+    @apply desktop:text-xl smalldesktop:text-xl tablet:text-xl mobile:text-xl font-raleway font-medium;
   }
   nav {
-    @apply mx-24;
+    @apply desktop:mx-24 smalldesktop:mx-20 tablet:mx-12 mobile:mx-10;
   }
   .common-container {
-    @apply mx-60;
+    @apply desktop:mx-60 smalldesktop:mx-40 tablet:mx-32 mobile:mx-10;
   }
   .noise-bg {
     background: url("./assets/Noise.png");
@@ -77,28 +77,15 @@
     max-width: 100%;
   }
 
-  .role-underline {
-  }
-
-  .role-underline::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    left: 0;
-    height: 3px;
-    border-radius: 2px;
-    background-image: var(--humana);
-  }
-
   .blog-container {
-    @apply desktop:mx-64 smalldesktop:mx-36;
+    @apply desktop:mx-64 smalldesktop:mx-36 tablet:mx-20 mobile:mx-10;
   }
 
   .cowrite-shadow {
     box-shadow: 0px 4px 44px #8bda9124;
   }
 }
+
 @layer components {
   .humana-gradient {
     background-image: var(--humana);
@@ -152,5 +139,5 @@
     z-index: -1;
   }
 }
-@layer utilities {
-}
+
+@layer utilities {}

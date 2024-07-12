@@ -26,14 +26,20 @@ const { title } = Astro.props;
   </head>
   <body
     id="portfolio-body"
-    class="noise-bg w-screen h-screen relative overflow-x-clip"
-  >
+    class="
+      desktop:noise-bg desktop:w-screen desktop:h-screen desktop:relative desktop:overflow-x-clip
+      smalldesktop:noise-bg smalldesktop:w-screen smalldesktop:h-screen smalldesktop:relative smalldesktop:overflow-x-clip
+      tablet:noise-bg tablet:w-screen tablet:h-screen tablet:relative tablet:overflow-x-clip
+      mobile:noise-bg mobile:w-screen mobile:h-screen mobile:relative mobile:overflow-x-clip
+      "
+    >
     <Image class="absolute -left-44" src={EllipseOne} alt="Decore" />
     <Image
       class="absolute -left-44"
-      style={{ bottom: "-180rem" }}
+      style={{ bottom: "-100rem" }}
       src={EllipseTwo}
       alt="Decore"
+      id="layer-blur-one"
     />
     <Image class="absolute -right-44" src={EllipseThree} alt="Decore" />
     <Image
@@ -41,9 +47,15 @@ const { title } = Astro.props;
       style={{ bottom: "-100rem" }}
       src={EllipseFour}
       alt="Decore"
+      id="layer-blur-two"
     />
     
-    <div class="px-auto fixed w-full z-10">
+    <div class="
+      desktop:px-auto desktop:fixed desktop:w-full desktop:z-10
+      smalldesktop:px-auto smalldesktop:fixed smalldesktop:w-full smalldesktop:z-10
+      tablet:px-auto tablet:fixed tablet:w-full tablet:z-10
+      mobile:px-auto mobile:fixed mobile:w-full mobile:z-10
+    ">
       <Nav />
     </div>
     <slot />
@@ -52,6 +64,9 @@ const { title } = Astro.props;
 
 <script>
   const body = document.getElementById("portfolio-body");
+  const blursOne = document.getElementById("layer-blur-one");
+  const blursTwo = document.getElementById("layer-blur-two");
+
 
   if (window.location.pathname === "/") {
     body.style.backgroundColor = "#FDFAF6";
@@ -59,6 +74,12 @@ const { title } = Astro.props;
     body.style.backgroundColor = "#F4FBF4";
   } else if (window.location.pathname === "/furhat/") {
     body.style.backgroundColor = "#F5F8FF";
+  }
+
+
+  if(window.location.pathname === "/about/"){
+    blursOne.style.display = "none"
+    blursTwo.style.display = "none"
   }
 
 

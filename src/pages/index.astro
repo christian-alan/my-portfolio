@@ -16,7 +16,10 @@ import FurhatCover from "../assets/furhat/Index.jpg";
   <main class="common-container" class="bg-light">
     <!-- Hero section -->
     <section
-      class="desktop:pt-80 desktop:pb-60 relative smalldesktop:py-44 tablet:py-32 mobile:py-16 table:flex-col tablet:items-center mobile:flex-col mobile:items-center smalldesktop:items-center desktop:items-center smalldesktop:flex-row desktop:flex-row"
+      class="desktop:pt-80 desktop:pb-50 desktop:flex-row desktop:items-center desktop:relative
+        smalldesktop:py-44 smalldesktop:items-center smalldesktop:flex-row smalldesktop:relative
+        tablet:pt-52 tablet:pb-24 table:flex-col tablet:items-center tablet:relative
+        mobile:pt-52 mobile:pb-32 mobile:flex-col mobile:items-center mobile:relative"
     >
       <div class="desktop:w-full tablet:w-full mobile:w-full">
         <h1
@@ -51,10 +54,19 @@ import FurhatCover from "../assets/furhat/Index.jpg";
 
     <!-- My design principles  -->
     <section
-      class="desktop:py-48 relative smalldesktop:py-44 tablet:py-32 mobile:py-16 table:flex-col tablet:items-center mobile:flex-col mobile:items-center smalldesktop:items-center desktop:items-center smalldesktop:flex-row desktop:flex-row"
+      class="desktop:py-48 relative desktop:flex-col desktop:flex
+      smalldesktop:py-44 smalldesktop:flex  smalldesktop:flex-col
+      tablet:py-32 tablet:flex tablet:flex-col 
+      mobile:pt-16 mobile:pb-32 mobile:flex mobile:flex-col
+      "
     >
       <!-- Header -->
-      <div class="flex flex-row items-center gap-5">
+      <div class="
+      desktop:flex desktop:flex-row desktop:items-center desktop:gap-5 desktop:justify-start
+      smalldesktop:flex smalldesktop:flex-row smalldesktop:items-center smalldesktop:gap-5 smalldesktop:justify-start
+      tablet:flex tablet:flex-col tablet:items-center tablet:justify-center tablet:gap-5
+      mobile:flex mobile:flex-col mobile:items-center mobile:justify-center mobile:gap-5
+      ">
         <h3 class="font-bold text-dark">My design principles</h3>
         <div class="h-0.5 w-32 bg-dark"></div>
       </div>
@@ -66,48 +78,78 @@ import FurhatCover from "../assets/furhat/Index.jpg";
       </p>
 
       <!-- Principles -->
-      <div class="mt-20 flex gap-10">
+      <div class="desktop:mt-20 desktop:flex desktop:flex-row desktop:gap-10 desktop:items-start
+        smalldesktop:mt-20 smalldesktop:flex smalldesktop:flex-row smalldesktop:gap-10 smalldesktop:items-start
+        tablet:mt-20 tablet:flex tablet:flex-col tablet:gap-10 tablet:items-center
+        mobile:mt-20 mobile:flex mobile:flex-col mobile:gap-10 mobile:items-center
+
+      ">
         <!-- Principle one -->
-        <div class="w-1/4">
+        <div class="
+          desktop:w-1/4 desktop:flex desktop:flex-col desktop:items-start desktop:justify-start
+          smalldesktop:w-1/4 smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start smalldesktop:justify-start
+          tablet:w-full tablet:flex tablet:flex-col tablet:items-center tablet:justify-center
+          mobile:w-full mobile:flex mobile:flex-col mobile:items-center mobile:justify-center
+          ">
           <div class="principle-box">
             <Image src={FunctionalSVG} alt="Functional" />
           </div>
           <h4 class="font-bold text-dark mt-6">Functional</h4>
-          <p class="text-dark text-xl mt-4 opacity-80">
+          <p class="text-dark text-xl mt-4 opacity-80
+           desktop:text-left smalldesktop:text-left tablet:text-center mobile:text-center">
             Simple yet efficient and doing what it’s supposed to do.
           </p>
         </div>
 
         <!-- Principle two -->
-        <div class="w-1/4">
+        <div class="
+          desktop:w-1/4 desktop:flex desktop:flex-col desktop:items-start desktop:justify-start
+          smalldesktop:w-1/4 smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start smalldesktop:justify-start
+          tablet:w-full tablet:flex tablet:flex-col tablet:items-center tablet:justify-center
+          mobile:w-full mobile:flex mobile:flex-col mobile:items-center mobile:justify-center
+          ">
           <div class="principle-box">
             <Image src={SelfExplainatorySVG} alt="Functional" />
           </div>
           <h4 class="font-bold text-dark mt-6">Self explanatory</h4>
-          <p class="text-dark text-xl mt-4 opacity-80">
+          <p class="text-dark text-xl mt-4 opacity-80
+           desktop:text-left smalldesktop:text-left tablet:text-center mobile:text-center">
             A product should teach its users how to use it.
           </p>
         </div>
 
         <!-- Principle three -->
-        <div class="w-1/4">
+        <div class="
+          desktop:w-1/4 desktop:flex desktop:flex-col desktop:items-start desktop:justify-start
+          smalldesktop:w-1/4 smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start smalldesktop:justify-start
+          tablet:w-full tablet:flex tablet:flex-col tablet:items-center tablet:justify-center
+          mobile:w-full mobile:flex mobile:flex-col mobile:items-center mobile:justify-center
+        ">
           <div class="principle-box">
             <Image src={DesirableSVG} alt="Functional" />
           </div>
           <h4 class="font-bold text-dark mt-6">Desirable</h4>
-          <p class="text-dark text-xl mt-4 opacity-80">
+          <p class="text-dark text-xl mt-4 opacity-80
+           desktop:text-left smalldesktop:text-left tablet:text-center mobile:text-center">
             Keeping it simple and playful. Focus on the things that bring
             delight to user. Something that keep them coming back.
           </p>
         </div>
 
         <!-- Principle four -->
-        <div class="w-1/4">
+        <div class="
+          desktop:w-1/4 desktop:flex desktop:flex-col desktop:items-start desktop:justify-start
+          smalldesktop:w-1/4 smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start smalldesktop:justify-start
+          tablet:w-full tablet:flex tablet:flex-col tablet:items-center tablet:justify-center
+          mobile:w-full mobile:flex mobile:flex-col mobile:items-center mobile:justify-center
+        ">
           <div class="principle-box">
             <Image src={HumanizedSVG} alt="Functional" />
           </div>
           <h4 class="font-bold text-dark mt-6">Humanized experience</h4>
-          <p class="text-dark text-xl mt-4 opacity-80">
+          <p class="
+          text-dark text-xl mt-4 opacity-80
+          desktop:text-left smalldesktop:text-left tablet:text-center mobile:text-center">
             “To err is human, to forgive, divine.” Designing experiences with
             humans is mind.
           </p>
@@ -118,13 +160,22 @@ import FurhatCover from "../assets/furhat/Index.jpg";
     <!-- Featured projects  -->
     <section>
       <!-- Header -->
-      <div class="flex flex-row items-center gap-5">
+      <div class="   
+      desktop:flex desktop:flex-row desktop:items-center desktop:gap-5 desktop:justify-start
+      smalldesktop:flex smalldesktop:flex-row smalldesktop:items-center smalldesktop:gap-5 smalldesktop:justify-start
+      tablet:flex tablet:flex-col tablet:items-center tablet:justify-center tablet:gap-5
+      mobile:flex mobile:flex-col mobile:items-center mobile:justify-center mobile:gap-5">
         <h3 class="font-bold text-dark">Featured UX projects 📏 ✏️</h3>
         <div class="h-0.5 w-32 bg-dark"></div>
       </div>
 
       <!-- Projects -->
-      <div class="grid grid-cols-3 gap-10 mt-10">
+      <div class="desktop:grid desktop:grid-cols-3 desktop:gap-10 desktop:mt-10
+      smalldesktop:grid smalldesktop:grid-cols-3 smalldesktop:gap-10 smalldesktop:mt-10
+      tablet:flex tablet:flex-col tablet:gap-10 tablet:mt-10
+      mobile:flex mobile:flex-col mobile:gap-10 mobile:mt-10
+      
+      ">
         <Image
           id="cowrite"
           class="col-span-2 img-blob cursor-pointer"
@@ -143,17 +194,17 @@ import FurhatCover from "../assets/furhat/Index.jpg";
     </section>
 
     <!-- Featured frontend projects  -->
-    <section
+    <!-- <section
       class="desktop:py-16 relative smalldesktop:py-16 tablet:py-16 mobile:py-12"
-    >
+    > -->
       <!-- Header -->
-      <div class="flex flex-row items-center gap-5">
+      <!-- <div class="flex flex-row items-center gap-5">
         <h3 class="font-bold text-dark">Featured dev projects 🦄</h3>
         <div class="h-0.5 w-32 bg-dark"></div>
-      </div>
+      </div> -->
 
       <!-- Projects -->
-      <div class="grid grid-cols-3 gap-10 mt-10">
+      <!-- <div class="grid grid-cols-3 gap-10 mt-10">
         <img
           id="cowrite"
           class="col-span-2 img-blob cursor-pointer"
@@ -167,7 +218,7 @@ import FurhatCover from "../assets/furhat/Index.jpg";
           alt="Blog Placeholder"
         />
       </div>
-    </section>
+    </section> -->
 
     <div class="divider-light my-16"></div>
 

@@ -3,9 +3,13 @@ import { Image } from "astro:assets";
 import LogoImg from "../assets/Logo.svg";
 ---
 
-<footer class="flex flex-col">
+<footer class="flex flex-col ">
   <!-- header -->
-  <div class="flex justify-between">
+  <div class="desktop:flex desktop:justify-between desktop:flex-row
+              smalldesktop:flex smalldesktop:justify-between smalldesktop:flex-row
+              tablet:flex tablet:flex-row tablet:justify-between tablet:gap-10 
+              mobile:flex mobile:flex-col mobile:justify-between mobile:gap-10
+  ">
     <Image src={LogoImg} alt="Logo SVG" />
     <div>
       <h2
@@ -18,7 +22,7 @@ import LogoImg from "../assets/Logo.svg";
       <ul class="grid grid-cols-2 mt-10 gap-5 opacity-80 text-dark">
         <li><a class="text-base font-base" href="/">Design</a></li>
         <li><a class="text-base font-base" href="/code/">LinkedIn</a></li>
-        <li><a class="text-base font-base" href="/code/">Code</a></li>
+        <!-- <li><a class="text-base font-base" href="/code/">Code</a></li> -->
         <li><a class="text-base font-base" href="/code/">Resume</a></li>
         <li><a class="text-base font-base" href="/about/">About me</a></li>
       </ul>

@@ -2,10 +2,129 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Alan Christian">
   <main class="common-container">
-    <div>about</div>
+    <!-- Hero section -->
+    <section
+      class="
+        desktop:flex desktop:flex-col desktop:pt-80 desktop:pb-60 desktop:gap-10 desktop:blog-container 
+        smalldesktop:flex smalldesktop:flex-col smalldesktop:pt-60 smalldesktop:pb-40 smalldesktop:gap-10 smalldesktop:blog-container
+        tablet:flex tablet:flex-col tablet:pt-60 tablet:pb-28 tablet:gap-6 tablet:blog-container
+        mobile:flex mobile:flex-col mobile:pt-60 mobile:pb-20 mobile:gap-6
+      "
+    >
+      <div class="desktop:w-full tablet:w-full mobile:w-full">
+        <h3
+          class="text-dark desktop:text-left smalldesktop:text-left mobile:text-left tablet:text-left"
+        >
+       <span class="opacity-50"> I’m Alan Christian, </span><span class="humana-gradient text-dark/0 bg-clip-text font-bold">a digital product designer & web developer</span> <span class="opacity-50"> based in Stockholm, Sweden. 
+        Currently, I'm at the verge of completion of 
+        my masters in Human-Computer Interaction from Uppsala University.</span>
+
+          <br class="mobile:hidden tablet:hidden desktop:block smalldesktop:block"/>
+          <!-- <span class="humana-gradient text-dark/0 bg-clip-text"
+              >human.</span
+            > -->
+        </h3>
+
+        <h3
+          class="text-dark desktop:text-left smalldesktop:text-left mobile:text-left mt-10 tablet:text-left opacity-50"
+        > Previously, I have worked for companies like Surfboard Payments and 2adpro (now a part of Delloite Digital). My experience in the field of UX is diverse. Throughout my career I have focused on creating delightful user interfaces that create positive business impact.
+        </h3>    
+      </div>
+
+      <div class="desktop:w-full font-raleway flex flex-col gap-5 tablet:w-full text-dark mobile:w-full">
+         
+
+        <div class="flex flex-col gap-2">
+          <p class="font-bold tracking-wide">SKILLS</p>
+          <ul>
+            <li class="font-playfair">UX Design</li>
+            <li class="font-playfair">UI Design</li>
+            <li class="font-playfair">UX Research</li>
+            <li class="font-playfair">Web Frontend development</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <p class="font-bold tracking-wide">TECH STACK</p>
+          <ul class="flex gap-5">
+            <li>
+              <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.775 0.875L12 5.6375L9.225 0.875H0L12 21.5L24 0.875H14.775Z" fill="#42B883"/>
+                <path d="M14.7748 0.875L11.9998 5.6375L9.2248 0.875H4.7998L11.9998 13.25L19.1998 0.875H14.7748Z" fill="#35495E"/>
+              </svg>
+              </li>
+            <li>
+              <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.70871 25.5525C6.35807 24.3136 5.96378 21.7105 6.52649 19.8247C7.50221 21.0137 8.85414 21.3903 10.2545 21.6029C12.4163 21.931 14.5394 21.8083 16.5476 20.8168C16.7773 20.7033 16.9896 20.5524 17.2406 20.3995C17.4291 20.948 17.4781 21.5019 17.4123 22.0655C17.2523 23.4383 16.5715 24.4987 15.4886 25.3025C15.0556 25.624 14.5974 25.9114 14.1502 26.2146C12.7764 27.1464 12.4047 28.2389 12.9209 29.8282C12.9332 29.8669 12.9442 29.9056 12.9719 30.0001C12.2704 29.6851 11.7581 29.2265 11.3677 28.6234C10.9553 27.9869 10.7591 27.2828 10.7488 26.521C10.7436 26.1503 10.7436 25.7762 10.6939 25.4108C10.5726 24.5197 10.1558 24.1207 9.37039 24.0977C8.56439 24.0741 7.92682 24.5741 7.75775 25.3615C7.74485 25.4219 7.72613 25.4816 7.70742 25.5518L7.70871 25.5525Z" fill="url(#paint0_linear_445_1186)"/>
+                <path d="M0 19.5103C0 19.5103 3.99947 17.5552 8.01012 17.5552L11.034 8.16461C11.1472 7.71047 11.4778 7.40185 11.8509 7.40185C12.2241 7.40185 12.5547 7.71047 12.6679 8.16461L15.6918 17.5552C20.4418 17.5552 23.7019 19.5103 23.7019 19.5103C23.7019 19.5103 16.9085 0.939907 16.8952 0.902648C16.7002 0.353607 16.3711 0 15.9273 0H7.77531C7.33154 0 7.01567 0.353607 6.80741 0.902648C6.79274 0.939204 0 19.5103 0 19.5103Z" fill="#383838"/>
+                <defs>
+                <linearGradient id="paint0_linear_445_1186" x1="7.5" y1="25" x2="17" y2="22.5" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#BC687C"/>
+                <stop offset="1" stop-color="#DC55E7"/>
+                </linearGradient>
+                </defs>
+              </svg>
+            </li>
+            <li>
+              <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.38477 23.3101C7.39568 23.7143 8.49253 23.9542 9.64412 23.9941C11.2027 24.0482 12.6847 23.7281 14.0097 23.1201C12.4209 22.5 10.9819 21.5932 9.75385 20.4658C8.95771 21.7319 7.78031 22.7319 6.38477 23.3101Z" fill="#FF9100"/>
+                <path d="M9.75324 20.4663C6.94987 17.8909 5.24928 14.1633 5.39296 10.0748C5.39765 9.94201 5.40472 9.80929 5.41294 9.67667C4.91089 9.54765 4.38674 9.46895 3.84731 9.45024C3.07519 9.42345 2.32747 9.51857 1.62155 9.71611C0.873199 11.0182 0.421601 12.5122 0.365348 14.1126C0.220152 18.2426 2.73626 21.8513 6.38416 23.3107C7.77978 22.7325 8.9571 21.7336 9.75324 20.4663Z" fill="#FFC400"/>
+                <path d="M9.75252 20.4664C10.4043 19.4303 10.7994 18.2156 10.8454 16.9069C10.9664 13.4645 8.63665 10.5031 5.41222 9.67676C5.40391 9.80938 5.39692 9.94209 5.39224 10.0748C5.24847 14.1633 6.94915 17.891 9.75252 20.4664Z" fill="#FF9100"/>
+                <path d="M10.4863 0C8.6498 1.46142 7.19962 3.38844 6.32222 5.60831C5.8199 6.87983 5.50424 8.24565 5.41211 9.67735C8.63663 10.5038 10.9664 13.4651 10.8454 16.9075C10.7994 18.2163 10.403 19.4297 9.7524 20.467C10.9805 21.5956 12.4194 22.5013 14.0083 23.1214C17.1974 21.657 19.4601 18.506 19.5911 14.779C19.676 12.3643 18.742 10.2122 17.4223 8.39557C16.0286 6.47434 10.4863 0 10.4863 0Z" fill="#DD2C00"/>
+              </svg>
+            </li>
+            <li>
+              <svg width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.5 20C0.5 17.7908 2.29084 16 4.50002 16H8.50004V20C8.50004 22.2092 6.7092 24 4.50002 24C2.29084 24 0.5 22.2092 0.5 20Z" fill="#0ACF83"/>
+                <path d="M8.5 11.9995C8.5 9.79043 10.2908 7.99951 12.5 7.99951C14.7091 7.99951 16.5 9.79035 16.5 11.9995C16.5 14.2087 14.7091 15.9995 12.5 15.9995C10.2908 15.9995 8.5 14.2086 8.5 11.9995Z" fill="#1ABCFE"/>
+                <path d="M0.5 11.9995C0.5 14.2087 2.29084 15.9995 4.50002 15.9995H8.50004V7.99951H4.50002C2.29084 7.99951 0.5 9.79035 0.5 11.9995Z" fill="#A259FF"/>
+                <path d="M8.5 0V8.00004H12.5C14.7092 8.00004 16.5 6.2092 16.5 4.00002C16.5 1.79087 14.7092 0 12.5 0H8.5Z" fill="#FF7262"/>
+                <path d="M0.5 4.00002C0.5 6.2092 2.29084 8.00004 4.50002 8.00004H8.50004V0H4.50002C2.29084 0 0.5 1.79087 0.5 4.00002Z" fill="#F24E1E"/>
+              </svg>
+            </li>
+            <li>
+              <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.6297 0C16.3699 0.0226065 16.0988 0.045213 15.8389 0.0791228C14.7301 0.203146 13.6516 0.522242 12.6529 1.02182C11.6233 1.5282 10.6874 2.20749 9.88537 3.03041C9.85162 3.07562 9.78412 3.09822 9.72675 3.08692C9.16983 3.00374 8.60597 2.97723 8.04375 3.0078C6.89694 3.06442 5.77406 3.35801 4.74525 3.87024C2.75625 4.86945 1.35562 6.42478 0.54225 8.51362C0.245493 9.28766 0.0701542 10.1033 0.0225 10.9314C0.0225 10.9879 0.01125 11.0331 0 11.0783V11.9521C0.0225 12.1793 0.05625 12.3952 0.07875 12.6224C0.19125 13.5413 0.45225 14.4264 0.869625 15.256C1.79663 17.1165 3.21975 18.4786 5.12888 19.3184C6.00069 19.7046 6.93403 19.9316 7.88512 19.9887C7.92112 19.9887 7.95262 19.9932 7.98187 20H17.6299C17.8357 19.9808 18.0371 19.9604 18.2453 19.9322C19.3465 19.808 20.4171 19.4888 21.4076 18.9895C23.0992 18.1599 24.5216 16.8648 25.5094 15.2549C26.1858 14.1929 26.6391 13.0032 26.8414 11.7588C26.8976 11.3745 26.9314 10.9766 26.9775 10.59C26.9775 10.5335 26.9888 10.4883 27 10.4431V9.54561C26.9775 9.28563 26.9438 9.0347 26.9438 8.79733C26.8202 7.69049 26.5026 6.61438 26.0055 5.61885C25.1676 3.92073 23.8719 2.49317 22.266 1.49881C21.2145 0.82739 20.0391 0.375692 18.81 0.170679C18.4027 0.102859 18.0079 0.0689498 17.6006 0.0237368C17.5444 0.0237368 17.4994 0.0124335 17.4431 0.00113024L16.6297 0ZM17.0449 1.91364C19.4366 1.91929 21.4661 2.84729 23.1142 4.68859C24.0474 5.75223 24.6758 7.0504 24.9323 8.44467C25.101 9.30824 25.1359 10.1933 25.011 11.067C24.7973 12.5884 24.2213 13.9494 23.238 15.1419C22.0955 16.5511 20.5097 17.5277 18.7414 17.9112C17.7955 18.1192 16.8205 18.1575 15.8614 18.0242C14.6295 17.8659 13.5 17.4579 12.483 16.7198C12.2132 16.5258 11.9603 16.3092 11.727 16.0721C10.3477 14.7101 8.982 13.3367 7.60275 11.9747C7.26412 11.6356 7.24163 11.2603 7.40025 10.919C7.48319 10.7367 7.62253 10.5863 7.7975 10.4902C7.97246 10.394 8.17368 10.3573 8.37112 10.3854C8.60737 10.408 8.78962 10.5448 8.95837 10.7155C10.2015 11.9747 11.4334 13.2124 12.6754 14.4727C13.6079 15.4282 14.8338 16.0398 16.155 16.2089C18.3465 16.5039 20.2106 15.8234 21.69 14.1766C22.4921 13.2802 22.9781 12.2019 23.1818 10.9992C23.4743 9.20538 23.058 7.59353 21.9499 6.17497C20.9677 4.91466 19.6796 4.13134 18.1204 3.84763C16.5274 3.56505 15.0255 3.87024 13.6586 4.74511C13.6249 4.76772 13.5461 4.77902 13.5113 4.75641C13.0143 4.38702 12.4849 4.06391 11.9295 3.79112C11.9295 3.79112 11.9182 3.77981 11.907 3.75721C12.3409 3.39422 12.8146 3.08211 13.3189 2.82695C14.2368 2.3263 15.2489 2.02442 16.29 1.94077C16.5408 1.92171 16.7922 1.91266 17.0437 1.91364H17.0449ZM8.48925 4.9237C10.1261 4.89657 11.6291 5.51712 12.969 6.76614C13.9297 7.67266 14.8106 8.61535 15.7365 9.55804C15.9964 9.81802 16.0526 10.1481 15.9289 10.4996C15.8051 10.8511 15.5216 11.0218 15.1605 11.0783C15.0299 11.0962 14.8969 11.0819 14.773 11.0366C14.6492 10.9913 14.5381 10.9164 14.4495 10.8184C13.5675 9.93218 12.6866 9.05844 11.817 8.16209C11.1049 7.42398 10.2578 7.0035 9.26325 6.82152C7.0605 6.42478 4.83525 7.7077 4.04438 9.80671C3.02738 12.4743 4.63163 15.4934 7.39913 16.1298C7.94138 16.2541 8.5185 16.2541 9.08325 16.2428C9.24075 16.2315 9.33075 16.288 9.44325 16.3897C9.98663 16.9244 10.5626 17.4579 11.1274 17.9903C11.1611 18.0242 11.2061 18.0581 11.2399 18.092C11.1724 18.092 11.1274 18.1033 11.0824 18.1033H8.49488C7.00198 18.103 5.55382 17.5913 4.38942 16.6525C3.22503 15.7138 2.41401 14.4042 2.09025 12.94C1.35563 9.61456 3.2535 6.24279 6.507 5.25602C7.14879 5.05166 7.81619 4.93977 8.48925 4.9237Z" fill="#7D7D7D"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="flex flex-col gap-2">
+          <p class="font-bold tracking-wide">EXPERIENCE</p>
+          <ul>
+
+            <li> <span class="font-playfair"> UX Consultant,</span> Cowrite AB</li>
+            <li> <span class="font-playfair"> Design Engineer,</span> Surfboard Payments AB</li>
+            <li><span class="font-playfair">Graphic Designer,</span> 2adpro (Now a part of Delloite Digital)</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <p class="font-bold tracking-wide">EDUCATION</p>
+          <ul>
+            <li><span class="font-playfair">Masters</span> in Human-Computer Interaction</li>
+            <li><span class="font-playfair">Bachelors</span> in Computer Science & Engineering</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <p class="font-bold tracking-wide">CONTACT</p>
+          <ul>
+            <li>christianalan129@gmail.com</li>
+            <li class="underline cursor-pointer">Download Resume</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+    <div class="divider-light my-16"></div>
+    <Footer />
   </main>
 </Layout>

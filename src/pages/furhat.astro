@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import Cover from "../assets/furhat/Cover.jpg";
-import Wireframe from "../assets/cowrite/Wireframes.jpg";
 import Setup from "../assets/furhat/EXSetup.jpg";
 import Footer from "../components/Footer.astro";
 import Problem from "../assets/furhat/Problems.jpg";
@@ -13,6 +12,7 @@ import Camera from "../assets/furhat/Camera.jpg";
 import Reader from "../assets/furhat/Reader.jpg";
 import Inclusive from "../assets/furhat/Inclusive.jpg";
 import Collaboration from "../assets/furhat/Collaboration.jpg";
+import Wireframe from "../assets/furhat/Wireframe.jpg";
 ---
 
 <Layout title="Alan Christian">
@@ -20,7 +20,12 @@ import Collaboration from "../assets/furhat/Collaboration.jpg";
     <!-- Hero section -->
 
     <section
-      class="desktop:pt-80 table:flex-col tablet:items-center mobile:flex-col mobile:items-center smalldesktop:items-center desktop:items-center smalldesktop:flex-row desktop:flex-row"
+      class="
+      desktop:pt-80 desktop:flex desktop:items-center  desktop:flex-row
+      smalldesktop:pt-80 smalldesktop:flex smalldesktop:items-center smalldesktop:flex-row
+      tablet:pt-60 tablet:flex table:flex-col tablet:items-center 
+      mobile:pt-60 mobile:flex mobile:flex-col mobile:items-center
+      "
     >
       <!-- Header -->
       <div class="flex gap-4 flex-col blog-container">
@@ -44,18 +49,40 @@ import Collaboration from "../assets/furhat/Collaboration.jpg";
 
       <div class="divider-light my-16"></div>
       <!-- Project meta data -->
-      <div class="grid-cols-3 grid gap-5 text-dark blog-container">
-        <div>
+      <div class=" 
+        desktop:grid-cols-3 desktop:grid desktop:gap-5 desktop:text-dark desktop:blog-container
+        smalldesktop:grid-cols-3 smalldesktop:grid smalldesktop:gap-5 smalldesktop:text-dark smalldesktop:blog-container
+        tablet:flex tablet:flex-col tablet:justify-center tablet:items-center tablet:gap-10 tablet:text-dark tablet:blog-container
+        mobile:flex mobile:flex-col mobile:justify-center mobile:items-center mobile:gap-10 mobile:text-dark mobile:blog-container
+      ">
+        <div class="
+        desktop:flex desktop:flex-col desktop:items-start
+        smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start
+        tablet:flex tablet:flex-col tablet:justify-center tablet:items-center
+        mobile:flex mobile:flex-col mobile:justify-center mobile:items-center
+      ">
           <h4 class="font-bold mb-4">Roles & responsibilities</h4>
           <p class="text-left">UX Research</p>
           <p class="text-left">UX Design</p>
         </div>
-        <div>
+        <div
+        class="
+        desktop:flex desktop:flex-col desktop:items-start
+        smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start
+        tablet:flex tablet:flex-col tablet:justify-center tablet:items-center
+        mobile:flex mobile:flex-col mobile:justify-center mobile:items-center
+      ">
           <h4 class="font-bold text-center mb-4">Project context</h4>
           <p class="text-center">Spring 2023</p>
           <p class="text-center">Coursework: Advanced Interaction Design</p>
         </div>
-        <div>
+        <div
+        class="
+        desktop:flex desktop:flex-col desktop:items-start
+        smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start
+        tablet:flex tablet:flex-col tablet:justify-center tablet:items-center
+        mobile:flex mobile:flex-col mobile:justify-center mobile:items-center
+      ">
           <h4 class="font-bold text-right mb-4">Tools used</h4>
           <p class="text-right">Figma</p>
           <p class="text-right">Furhat Robot</p>
@@ -99,7 +126,7 @@ import Collaboration from "../assets/furhat/Collaboration.jpg";
           <a href="#reader">Dialog reader</a>
         </li>
         <li style="margin-left:10px">
-          <a href="#actions">General actions</a>
+          <a href="#actions">System actions</a>
         </li>
       </ul>
     </div>
@@ -160,11 +187,6 @@ import Collaboration from "../assets/furhat/Collaboration.jpg";
     <section id="wireframes" class="flex flex-col">
       <BlogSection
         title="Wireframes"
-        subtitle="Strengthen the value proposition of core products"
-        description=`With new products introduced, we want to highlight our core product
-          offerings that go beyond Deals. We aim to allow a habit-building &
-          fast payment experience for our consumers, while strengthening product
-          discovery on the app.`
         images={[Wireframe]}
       />
     </section>
@@ -175,7 +197,7 @@ import Collaboration from "../assets/furhat/Collaboration.jpg";
     </section>
     <!-- Prototype: Dashboard  -->
     <section id="dashboard" class="flex flex-col mt-5">
-      <BlogSection subtitle="dashboard" images={[Dashboard]} />
+      <BlogSection images={[Dashboard]} />
     </section>
 
     <!-- Prototype: Collaboration  -->
@@ -225,10 +247,11 @@ import Collaboration from "../assets/furhat/Collaboration.jpg";
       images={[Reader]} />
     </section>
 
-    <!-- Prototype: action  -->
+    <!-- Prototype: System action  -->
     <section id="actions" class="flex flex-col">
       <BlogSection 
-        description="This dashboard provides 3 essential system actions: a) Language settings; b) Sound intensity (to control the loudness of the audio); and c) System shutdown. "  subtitle="General actions components" 
+        description="This dashboard provides 3 essential system actions: a) Language settings; b) Sound intensity (to control the loudness of the audio); and c) System shutdown. "  
+        subtitle="System actions components" 
         images={[Actions]} 
         bullets={[
           'Provides language options',
@@ -241,15 +264,15 @@ import Collaboration from "../assets/furhat/Collaboration.jpg";
     <div class="divider-light my-16"></div>
 
     <!-- More to explore -->
-    <section class="flex flex-col">
+    <!-- <section class="flex flex-col"> -->
       <!-- Header -->
-      <div class="flex flex-row items-center gap-5">
+      <!-- <div class="flex flex-row items-center gap-5">
         <h3 class="font-bold text-dark">More to explore</h3>
         <div class="h-0.5 w-32 bg-dark"></div>
-      </div>
+      </div> -->
 
       <!-- Explore more -->
-      <div class="grid grid-cols-3 gap-10 mt-10">
+      <!-- <div class="grid grid-cols-3 gap-10 mt-10">
         <img
           id="cowrite"
           class="col-span-2 img-blob"
@@ -265,7 +288,7 @@ import Collaboration from "../assets/furhat/Collaboration.jpg";
       </div>
     </section>
 
-    <div class="divider-light my-16"></div>
+    <div class="divider-light my-16"></div> -->
 
     <!-- Footer -->
     <Footer />
