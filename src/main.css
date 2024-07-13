@@ -61,7 +61,7 @@
   }
 
   .img-blob {
-    @apply object-cover rounded-xl w-full desktop:h-[44rem] smalldesktop:h-[44rem] tablet:h-[36rem] mobile:h-[24rem];
+    @apply object-cover rounded-xl w-full desktop:h-[44rem] smalldesktop:h-[44rem] tablet:h-[36rem] mobile:h-[20rem];
     box-shadow: 0px 5px 36px #2f303930;
   }
 
