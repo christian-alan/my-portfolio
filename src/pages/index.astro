@@ -272,10 +272,10 @@ import { manifest } from "astro:ssr-manifest";
   })
 
   furhatBlog.addEventListener("mousemove",(event)=>{
-    furhatBlog.style.transform = `perspective(200px) rotateX(${event.layerX/1000}deg) rotateY(${event.layerY/1000}deg)`
+    furhatBlog.style.transform = `perspective(100px) rotateX(${event.layerX/1000}deg) rotateY(${event.layerY/1000}deg)`
   })
   furhatBlog.addEventListener("mouseleave",()=>{
-     furhatBlog.style.transform = `perspective(200px) rotateX(0deg) rotateY(0deg)`
+     furhatBlog.style.transform = `perspective(100px) rotateX(0deg) rotateY(0deg)`
   })
 
 
