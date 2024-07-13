@@ -54,7 +54,7 @@
     /* @apply desktop:mx-24 smalldesktop:mx-20 tablet:mx-12 mobile:mx-10; */
   }
   .common-container {
-    @apply desktop:mx-60 smalldesktop:mx-40 tablet:mx-32 mobile:mx-10;
+    @apply desktop:mx-60 smalldesktop:mx-40 tablet:mx-32 mobile:mx-5;
   }
   .noise-bg {
     background: url("./assets/Noise.png");
@@ -81,7 +81,7 @@
   }
 
   .blog-container {
-    @apply desktop:mx-64 smalldesktop:mx-36 tablet:mx-20 mobile:mx-0;
+    @apply desktop:mx-64 smalldesktop:mx-36 tablet:mx-20 mobile:mx-5;
   }
 
   .cowrite-shadow {
