@@ -31,7 +31,7 @@ mobile:flex mobile:w-full mobile:justify-center mobile:font-raleway mobile:py-6
   const homeLink = document.getElementById("home-link");
   const codeLink = document.getElementById("code-link");
   const aboutLink = document.getElementById("about-link");
-  const themeBtn = document.getElementById('theme-btn');
+  // const themeBtn = document.getElementById('theme-btn');
 
   if (window.location.pathname === "/") homeLink.style.fontWeight = "bold";
   if (window.location.pathname === "/cowrite/") homeLink.style.fontWeight = "bold";
@@ -40,17 +40,17 @@ mobile:flex mobile:w-full mobile:justify-center mobile:font-raleway mobile:py-6
   if (window.location.pathname === "/about/") aboutLink.style.fontWeight = "bold";
   
   
-  themeBtn.addEventListener("click",()=>{
-      if(localStorage.theme === 'light') localStorage.setItem("theme","dark")
-      if(localStorage.theme === 'dark') localStorage.setItem("theme","light")
+  // themeBtn.addEventListener("click",()=>{
+  //     if(localStorage.theme === 'light') localStorage.setItem("theme","dark")
+  //     if(localStorage.theme === 'dark') localStorage.setItem("theme","light")
 
-      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
-  })
+  //     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+  //     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+  //       document.documentElement.classList.add('dark')
+  //     } else {
+  //       document.documentElement.classList.remove('dark')
+  //     }
+  // })
 
 </script>
 
