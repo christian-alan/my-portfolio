@@ -2,6 +2,7 @@
 
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: ['selector', '[data-mode="dark"]'],
 	theme: {
 		screens:{
 			tablet:'960px',
@@ -34,7 +35,8 @@ export default {
 			teal:'#7EB9CF',
 			bleå:"#2335F5",
 			light:"#FEFDFB",
-			"light-green":"#F4FBF4"
+			"light-green":"#F4FBF4",
+			"black-mode":"#171717"
 		},
 
 		extend: {},

@@ -67,7 +67,8 @@ const { title } = Astro.props;
   const blursOne = document.getElementById("layer-blur-one");
   const blursTwo = document.getElementById("layer-blur-two");
 
-
+  
+  localStorage.setItem("theme", "light");
   if (window.location.pathname === "/") {
     body.style.backgroundColor = "#FDFAF6";
   } else if (window.location.pathname === "/cowrite/") {
@@ -75,12 +76,11 @@ const { title } = Astro.props;
   } else if (window.location.pathname === "/furhat/") {
     body.style.backgroundColor = "#F5F8FF";
   }
-
+  
 
   if(window.location.pathname === "/about/"){
     blursOne.style.display = "none"
     blursTwo.style.display = "none"
   }
-
 
 </script>

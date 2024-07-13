@@ -93,6 +93,11 @@
   .humana-gradient {
     background-image: var(--humana);
   }
+  .roe-gif {
+    background-image: url("./assets/Rogan.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   .boe-gif {
     background-image: url("./assets/Bogan.gif");
     background-repeat: no-repeat;
