@@ -12,7 +12,7 @@ export default {
 		fontSize:{
 			xs:['12px',{lineHeight:'15px'}],
 			sm:['14px',{lineHeight:'18px'}],
-			lg:['16px',{lineHeight:'20px'}],
+			lg:['16px',{lineHeight:'24px'}],
 			xl:['18px',{lineHeight:'30px'}],
 			'2xl':['24px',{lineHeight:'32px'}],
 			'3xl':['32px',{lineHeight:'42px'}],
