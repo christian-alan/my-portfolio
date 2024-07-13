@@ -265,10 +265,10 @@ import { manifest } from "astro:ssr-manifest";
 
   // image card animation script
   cowriteBlog.addEventListener("mousemove",(event)=>{
-    cowriteBlog.style.transform = `perspective(300px) rotateX(${event.layerX/1000}deg) rotateY(${event.layerY/1000}deg)`
+    cowriteBlog.style.transform = `perspective(400px) rotateX(${event.layerX/1000}deg) rotateY(${event.layerY/1000}deg)`
   })
   cowriteBlog.addEventListener("mouseleave",()=>{
-     cowriteBlog.style.transform = `perspective(300px) rotateX(0deg) rotateY(0deg)`
+     cowriteBlog.style.transform = `perspective(400px) rotateX(0deg) rotateY(0deg)`
   })
 
   furhatBlog.addEventListener("mousemove",(event)=>{
