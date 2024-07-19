@@ -8,7 +8,10 @@ import FunctionalSVG from "../assets/icons/Functional.svg";
 import HumanizedSVG from "../assets/icons/Humanized.svg";
 import SelfExplainatorySVG from "../assets/icons/SelfExplainatory.svg";
 import CowriteCover from "../assets/cowrite/Index.jpg";
-import FurhatCover from "../assets/furhat/Index.jpg";
+import FurhatCover from "../assets/furhat/Index.jpg"; 
+import DropDownCover from '../assets/dropdown/Cover.jpg';
+import SpotifyCover from '../assets/spotify/Cover.jpg';
+
 
 ---
 
@@ -202,37 +205,68 @@ import FurhatCover from "../assets/furhat/Index.jpg";
           `
           src={FurhatCover}
           alt="furhat's placeholder"
-           style="transition-duration:0.2s"
+          style="transition-duration:0.2s"
         />
       </div>
     </section>
 
-    <!-- Featured frontend projects  -->
-    <!-- <section
-      class="desktop:py-16 relative smalldesktop:py-16 tablet:py-16 mobile:py-12"
-    > -->
+     <!-- Featured Frontend projects  -->
+     <section class="desktop:py-16 relative smalldesktop:py-16 tablet:py-16 mobile:py-12">
       <!-- Header -->
-      <!-- <div class="flex flex-row items-center gap-5">
+      <div class="   
+      desktop:flex desktop:flex-row desktop:items-center desktop:gap-5 desktop:justify-start
+      smalldesktop:flex smalldesktop:flex-row smalldesktop:items-center smalldesktop:gap-5 smalldesktop:justify-start
+      tablet:flex tablet:flex-col tablet:items-center tablet:justify-center tablet:gap-5
+      mobile:flex mobile:flex-col mobile:items-center mobile:justify-center mobile:gap-5">
         <h3 class="font-bold text-dark">Featured dev projects 🦄</h3>
         <div class="h-0.5 w-32 bg-dark"></div>
-      </div> -->
+      </div>
 
       <!-- Projects -->
-      <!-- <div class="grid grid-cols-3 gap-10 mt-10">
-        <img
-          id="cowrite"
-          class="col-span-2 img-blob cursor-pointer"
-          src="https://images.unsplash.com/photo-1693768420662-a07a2bcaee20?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Blog Placeholder"
+      <div class="desktop:grid desktop:grid-cols-2 desktop:gap-10 desktop:mt-10
+      smalldesktop:grid smalldesktop:grid-cols-2 smalldesktop:gap-10 smalldesktop:mt-10
+      tablet:flex tablet:flex-col tablet:gap-10 tablet:mt-10
+      mobile:flex mobile:flex-col mobile:gap-10 mobile:mt-10
+      
+      ">
+      <div  class="col-span-1 flex flex-col img-dev-card items-center gap-5 bg-white">
+        <Image
+          id="drop-down"
+          class=`desktop:col-span-1 desktop:img-dev-blob desktop:cursor-pointer
+          smalldesktop:col-span-1 smalldesktop:img-dev-blob smalldesktop:cursor-pointer
+          tablet:w-full tablet:img-dev-blob tablet:cursor-pointer
+          mobile:w-full mobile:img-dev-blob mobile:cursor-pointer
+          `
+          src={DropDownCover}
+          alt="Drop Down placeholder"
+          style="transition-duration:0.4s"
         />
-        <img
-          id="furhat"
-          class="col-span-1 img-blob cursor-pointer"
-          src="https://images.unsplash.com/photo-1720188228786-e6cb3b668aef?q=80&w=3732&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Blog Placeholder"
-        />
+        <div class="flex flex-col items-center gap-2"> 
+          <h4 class="text-sm text-dark"> BY ALAN CHRISTIAN</h4>
+          <p class="text-center text-dark desktop:text-lg smalldesktop:text-lg tablet:text-lg mobile:text-sm font-bold"> A roadmap to building a reusable drop-down component in <br/>  Astro & Vue</p>
+        </div>
+
       </div>
-    </section> -->
+      <div class="col-span-1 flex flex-col img-dev-card items-center gap-5 bg-white">
+        <Image
+          id="drop-down"
+          class=`desktop:col-span-1 desktop:img-dev-blob desktop:cursor-pointer
+          smalldesktop:col-span-1 smalldesktop:img-dev-blob smalldesktop:cursor-pointer
+          tablet:w-full tablet:img-dev-blob tablet:cursor-pointer
+          mobile:w-full mobile:img-dev-blob mobile:cursor-pointer
+          `
+          src={SpotifyCover}
+          alt="spotify placeholder"
+          style="transition-duration:0.4s"
+        />
+        <div class="flex flex-col items-center gap-2">
+          <h4 class="text-sm text-dark"> BY ALAN CHRISTIAN</h4>
+          <p class="text-center text-dark font-bold desktop:text-lg smalldesktop:text-lg tablet:text-lg mobile:text-sm "> A knock off of spotify in Astro & Vue</p>
+        </div> 
+      </div>
+      
+      </div>
+    </section>
 
     <div class="divider-light my-16"></div>
 
@@ -241,23 +275,17 @@ import FurhatCover from "../assets/furhat/Index.jpg";
   </main>
 </Layout>
 <script>
-import { manifest } from "astro:ssr-manifest";
 
   const cowriteBlog = document.getElementById("cowrite");
-  // const ecrBlog = document.getElementById("ecr");
-  // const webkybBlog = document.getElementById("webkyb");
+  const componentBlog = document.getElementById("drop-down");
   const furhatBlog = document.getElementById("furhat");
 
   cowriteBlog.addEventListener("click", () => {
     window.location.href = "/cowrite/";
   });
-  // ecrBlog.addEventListener("click", () => {
-  //   window.location.href = "/ecr/";
-  // });
-
-  // webkybBlog.addEventListener("click", () => {
-  //   window.location.href = "/webkyb/";
-  // });
+  componentBlog.addEventListener("click", () => {
+    window.location.href = "/dropdown/";
+  });
 
   furhatBlog.addEventListener("click", () => {
     window.location.href = "/furhat/";

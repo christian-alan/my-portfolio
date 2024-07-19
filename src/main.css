@@ -64,7 +64,14 @@
     @apply object-cover rounded-xl w-full desktop:h-[44rem] smalldesktop:h-[44rem] tablet:h-[36rem] mobile:h-[20rem];
     box-shadow: 0px 5px 36px #2f303930;
   }
+  .img-dev-blob {
+    @apply object-cover rounded-xl w-full h-auto;
+  }
 
+  .img-dev-card {
+    @apply  rounded-xl w-full h-auto p-8;
+    box-shadow: 0px 5px 36px #2f303930;
+  }
   .divider-light {
     @apply w-full;
     background-image: var(--border-light);

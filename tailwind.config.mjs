@@ -36,6 +36,7 @@ export default {
 			bleå:"#2335F5",
 			light:"#FEFDFB",
 			"light-green":"#F4FBF4",
+			white:"#FFFFFF"
 		},
 
 		extend: {},
