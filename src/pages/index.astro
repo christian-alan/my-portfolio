@@ -11,6 +11,7 @@ import CowriteCover from "../assets/cowrite/Index.jpg";
 import FurhatCover from "../assets/furhat/Index.jpg"; 
 import DropDownCover from '../assets/dropdown/Cover.jpg';
 import SpotifyCover from '../assets/spotify/Cover.jpg';
+import FurhatCoverMT from '../assets/furhat/Cover-mt.jpg'
 ---
 
 <Layout title="Alan Christian">
@@ -38,11 +39,11 @@ import SpotifyCover from '../assets/spotify/Cover.jpg';
         >
           Hej, I’m Alan. I am a 
 		  	<span id="role-italic" class="relative font-playfair italic">
-				UI/UX designer & a frontend developer
+				UI/UX designer and frontend developer
 			</span>
           <br
             class="mobile:hidden tablet:hidden desktop:block smalldesktop:block"
-          /> that designs & builds delightful interfaces to drive business success.
+          /> that designs and builds delightful interfaces to drive business success.
 		</p>
       </div>
       <div
@@ -185,26 +186,28 @@ import SpotifyCover from '../assets/spotify/Cover.jpg';
       ">
         <Image
           id="cowrite"
-          class=`desktop:col-span-2 desktop:img-blob desktop:cursor-pointer
-          smalldesktop:col-span-2 smalldesktop:img-blob smalldesktop:cursor-pointer
-          tablet:w-full tablet:img-blob tablet:cursor-pointer
-          mobile:w-full mobile:img-blob mobile:cursor-pointer
+          class=`cursor-pointer desktop:col-span-2 desktop:img-blob 
+          smalldesktop:col-span-2 smalldesktop:img-blob 
+          tablet:w-full tablet:img-blob 
+          mobile:w-full mobile:img-blob 
           `
           src={CowriteCover}
           alt="cowrite's placeholder"
           style="transition-duration:0.4s"
         />
+  
         <Image
-          id="furhat"
-          class=`desktop:col-span-1 desktop:img-blob desktop:cursor-pointer
-          smalldesktop:col-span-1 smalldesktop:img-blob smalldesktop:cursor-pointer
-          tablet:w-full tablet:img-blob tablet:cursor-pointer
-          mobile:w-full mobile:img-blob mobile:cursor-pointer
-          `
-          src={FurhatCover}
-          alt="furhat's placeholder"
-          style="transition-duration:0.2s"
-        />
+        id="furhat"
+        class=`cursor-pointer desktop:col-span-1 desktop:img-blob 
+        smalldesktop:col-span-1 smalldesktop:img-blob 
+        tablet:w-full tablet:img-blob 
+        mobile:w-full mobile:img-blob 
+        `
+        src={FurhatCover}
+        alt="furhat's placeholder"
+        style="transition-duration:0.2s"
+      />
+
       </div>
     </section>
 
@@ -227,9 +230,10 @@ import SpotifyCover from '../assets/spotify/Cover.jpg';
       mobile:flex mobile:flex-col mobile:gap-10 mobile:mt-10
       
       ">
-      <div  class="col-span-1 flex flex-col img-dev-card items-center gap-5 bg-white">
+      <div class="col-span-1 flex flex-col img-dev-card items-center gap-5 bg-white">
         <Image
           id="drop-down"
+          
           class=`desktop:col-span-1 desktop:img-dev-blob desktop:cursor-pointer
           smalldesktop:col-span-1 smalldesktop:img-dev-blob smalldesktop:cursor-pointer
           tablet:w-full tablet:img-dev-blob tablet:cursor-pointer
@@ -241,7 +245,7 @@ import SpotifyCover from '../assets/spotify/Cover.jpg';
         />
         <div class="flex flex-col items-center gap-2"> 
           <h4 class="text-sm text-dark"> BY ALAN CHRISTIAN</h4>
-          <p class="text-center text-dark desktop:text-lg smalldesktop:text-lg tablet:text-lg mobile:text-sm font-bold"> A roadmap to building a reusable drop-down component in <br/>  Astro & Vue</p>
+          <p class="text-center text-dark desktop:text-lg smalldesktop:text-lg tablet:text-lg mobile:text-sm font-bold"> A roadmap to building a reusable drop-down component in Astro & Vue</p>
         </div>
 
       </div>
@@ -298,10 +302,10 @@ import SpotifyCover from '../assets/spotify/Cover.jpg';
   })
 
   furhatBlog.addEventListener("mousemove",(event)=>{
-    furhatBlog.style.transform = `perspective(100px) rotateX(${event.layerX/1000}deg) rotateY(${event.layerY/1000}deg)`
+    furhatBlog.style.transform = `perspective(300px) rotateX(${event.layerX/1000}deg) rotateY(${event.layerY/1000}deg)`
   })
   furhatBlog.addEventListener("mouseleave",()=>{
-     furhatBlog.style.transform = `perspective(100px) rotateX(0deg) rotateY(0deg)`
+     furhatBlog.style.transform = `perspective(300px) rotateX(0deg) rotateY(0deg)`
   })
 
 
