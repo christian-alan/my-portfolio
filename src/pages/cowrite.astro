@@ -103,10 +103,19 @@ import BlogSection from "../components/blog/BlogSection.astro";
     <div class="divider-light my-16"></div>
 
     <!-- Section jumps -->
-    <div class="sticky top-20 -inset-20 z-10 flex">
+    <div class="
+    desktop:sticky desktop:top-20 desktop:-inset-20 desktop:z-10 desktop:flex
+    smalldesktop:sticky smalldesktop:top-20 smalldesktop:-inset-20 smalldesktop:z-10 smalldesktop:flex
+    tablet:hidden
+    mobile:hidden
+    ">
       
       <ul
-        class="flex absolute -left-52 text-sm flex-col gap-2 text-dark"
+      class="
+      desktop:flex desktop:absolute desktop:-left-52 desktop:text-sm desktop:flex-col desktop:gap-2 desktop:text-dark
+      smalldesktop:flex smalldesktop:absolute smalldesktop:-left-32 smalldesktop:text-sm smalldesktop:flex-col smalldesktop:gap-2 smalldesktop:text-dark
+      
+      "
       >
         <li class="font-bold leading-10 tracking-widest">TABLE OF CONTENTS</li>
         <li><a href="#overview">Overview</a></li>
