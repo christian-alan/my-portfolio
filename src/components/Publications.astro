@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+const { title, author, date, category, cover, description, link } = Astro.props;
+---
+
+<div
+  class="w-full h-full flex desktop:flex-row smalldesktop:flex-row tablet:flex-row mobile:flex-col gap-8"
+>
+  <Image
+    id="publication"
+    src={cover}
+    alt="Publication Image"
+    class="desktop:w-1/4 smalldesktop:w-1/4 tablet:w-1/4 mobile:w-full cursor-pointer"
+  />
+  <div
+    class="desktop:w-3/4 smalldesktop:w-3/4 tablet:w-3/4 mobile:w-full flex flex-col gap-2"
+  >
+    <p class="text-theme-text text-body font-bold">{category}</p>
+    <p class="text-theme-text text-body opacity-70">{date} / By {author}</p>
+    <a
+      href={link}
+      class="cursor-pointer hover:underline transition-all duration-300 text-theme-text font-playfair desktop:text-headline1 smalldesktop:text-headline1 tablet:text-subheadline1 mobile:text-subheadline1 underline-thin"
+    >
+      {title}
+    </a>
+    <p
+      class="text-theme-text desktop:text-body1 smalldesktop:text-body1 tablet:text-body2 mobile:text-body2 opacity-70 text-justify"
+    >
+      {description}
+    </p>
+  </div>
+</div>
+
+<script>
+  const publication = document.getElementById("publication");
+  if (publication) {
+    publication.addEventListener("click", () => {
+      window.location.href = "";
+    });
+    publication.addEventListener("mousemove", (event) => {
+      publication.style.transform = `perspective(250px) rotateX(${event.layerX / 1000}deg) rotateY(${event.layerY / 1000}deg)`;
+    });
+    publication.addEventListener("mouseleave", () => {
+      publication.style.transform = `perspective(250px) rotateX(0deg) rotateY(0deg)`;
+    });
+  }
+</script>
+<style></style>

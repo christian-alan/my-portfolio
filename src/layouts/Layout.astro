@@ -1,11 +1,9 @@
 ---
 import "./../main.css";
+import "./../arora.css";
 import Nav from "../components/Nav.astro";
-import { Image } from "astro:assets";
-import EllipseOne from "../assets/background/Ellipse_one.png";
-import EllipseTwo from "../assets/background/Ellipse_two.png";
-import EllipseThree from "../assets/background/Ellipse_three.png";
-import EllipseFour from "../assets/background/Ellipse_four.png";
+import { Particles } from "../components/magicui/particles";
+import { Meteors } from "../components/magicui/meteors";
 
 interface Props {
   title: string;
@@ -26,36 +24,38 @@ const { title } = Astro.props;
   </head>
   <body
     id="portfolio-body"
-    class="
-      desktop:noise-bg desktop:w-screen desktop:h-screen desktop:relative desktop:overflow-x-clip
-      smalldesktop:noise-bg smalldesktop:w-screen smalldesktop:h-screen smalldesktop:relative smalldesktop:overflow-x-clip
-      tablet:noise-bg tablet:w-screen tablet:h-screen tablet:relative tablet:overflow-x-clip
-      mobile:noise-bg mobile:w-screen mobile:h-screen mobile:relative mobile:overflow-x-clip
-      "
+    class="bg-bkg relative
+    desktop:w-screen desktop:h-screen desktop:relative desktop:overflow-x-clip
+    smalldesktop:w-screen smalldesktop:h-screen smalldesktop:relative smalldesktop:overflow-x-clip
+    tablet:w-screen tablet:h-screen tablet:relative tablet:overflow-x-clip
+    mobile:w-screen mobile:h-screen mobile:relative mobile:overflow-x-clip"
+  >
+    <div class="arora-container">
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+    </div>
+    <Particles
+      className="absolute inset-0"
+      client:load
+      quantity={300}
+      ease={100}
+      color={"#FBF8F4"}
+      refresh
+    />
+
+    <div
+      class="desktop:fixed desktop:w-full desktop:z-10
+      smalldesktop:fixed smalldesktop:w-full smalldesktop:z-10
+      tablet:fixed tablet:w-full tablet:z-10
+      mobile:fixed mobile:w-full mobile:z-10"
     >
-    <Image class="absolute -left-44 -z-10" src={EllipseOne} alt="Decore" />
-    <Image
-      class="absolute -left-44 -z-10"
-      style={{ bottom: "-100rem" }}
-      src={EllipseTwo}
-      alt="Decore"
-      id="layer-blur-one"
-    />
-    <Image class="absolute -right-44 -z-10" src={EllipseThree} alt="Decore" />
-    <Image
-      class="absolute -right-64 -z-10"
-      style={{ bottom: "-100rem" }}
-      src={EllipseFour}
-      alt="Decore"
-      id="layer-blur-two"
-    />
-    
-    <div class="
-      desktop:px-auto desktop:fixed desktop:w-full desktop:z-10
-      smalldesktop:px-auto smalldesktop:fixed smalldesktop:w-full smalldesktop:z-10
-      tablet:px-auto tablet:fixed tablet:w-full tablet:z-10
-      mobile:px-0 mobile:fixed mobile:w-full mobile:z-10
-    ">
       <Nav />
     </div>
     <slot />
@@ -63,24 +63,17 @@ const { title } = Astro.props;
 </html>
 
 <script>
-  const body = document.getElementById("portfolio-body");
-  const blursOne = document.getElementById("layer-blur-one");
-  const blursTwo = document.getElementById("layer-blur-two");
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+  const userTheme = localStorage.getItem("theme");
+  const setTheme = () => {
+    if (userTheme) {
+      document.documentElement.setAttribute("data-theme", userTheme);
+    } else {
+      document.documentElement.setAttribute("data-theme", systemTheme);
+    }
+  };
 
-  
-  localStorage.setItem("theme", "light");
-  if (window.location.pathname === "/") {
-    body.style.backgroundColor = "#FDFAF6";
-  } else if (window.location.pathname === "/cowrite/") {
-    body.style.backgroundColor = "#F4FBF4";
-  } else if (window.location.pathname === "/furhat/") {
-    body.style.backgroundColor = "#F5F8FF";
-  }
-  
-
-  if(window.location.pathname === "/about/"){
-    blursOne.style.display = "none"
-    blursTwo.style.display = "none"
-  }
-
+  setTheme();
 </script>

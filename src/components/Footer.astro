@@ -1,45 +1,56 @@
 ---
 import { Image } from "astro:assets";
-import LogoImg from "../assets/Logo.svg";
+import LogoImg from "../assets/logos/LogoFooter.svg";
 
-const resumeLink = 'https://drive.google.com/file/d/14bNyYYbjFtiCrKHA45TV7wMTLmlEBkbb/view?usp=sharing';
-const linkedInLink = 'https://www.linkedin.com/in/alan-christian-955327159/'
+const resumeLink =
+  "https://drive.google.com/file/d/14bNyYYbjFtiCrKHA45TV7wMTLmlEBkbb/view?usp=sharing";
+const linkedInLink = "https://www.linkedin.com/in/alan-christian-955327159/";
 ---
 
-<footer class="flex flex-col ">
+<footer class="flex flex-col">
   <!-- header -->
-  <div class="desktop:flex desktop:justify-between desktop:flex-row
-              smalldesktop:flex smalldesktop:justify-between smalldesktop:flex-row
-              tablet:flex tablet:flex-row tablet:justify-between tablet:gap-10 
-              mobile:flex mobile:flex-col mobile:justify-between mobile:gap-10
-  ">
+  <div
+    class="desktop:flex desktop:justify-between desktop:flex-row desktop:items-start
+              smalldesktop:flex smalldesktop:justify-between smalldesktop:flex-row smalldesktop:items-start
+              tablet:flex tablet:flex-row tablet:justify-between tablet:gap-10 tablet:items-start
+              mobile:flex mobile:flex-col mobile:justify-between mobile:gap-10 mobile:items-start"
+  >
     <Image src={LogoImg} alt="Logo SVG" />
     <div>
       <h2
-        class="desktop:text-4xl smalldesktop:text-4xl tablet:text-3xl mobile:text-3xl"
+        class="desktop:text-title2 smalldesktop:text-title2 tablet:text-title3 mobile:text-title3 cursor-pointer"
       >
-      <span class="humana-gradient font-semibold text-dark/0 bg-clip-text ">
-        Let’s connect <br />
-        Drop me a line
-      </span>
+        <span
+          class="humana-gradient font-playfair offset-1 text-dark/0 bg-clip-text"
+        >
+          Let’s connect <br />
+          Drop me a line
+        </span>
         😄
       </h2>
-    
+
       <!-- Links -->
-      <ul class="grid grid-cols-2 mt-10 gap-5 opacity-80 text-dark">
-        <li><a class="text-base font-medium hover:font-bold ease-out" href="/">Design</a></li>
-        <li><a class="text-base font-medium hover:font-bold ease-out" href={linkedInLink}>LinkedIn</a></li>
-        <!-- <li><a class="text-base font-base" href="/code/">Code</a></li> -->
-        <li><a class="text-base font-medium hover:font-bold ease-out" href="/about/">About me</a></li>
-        <li><a class="text-base font-medium hover:font-bold ease-out" href={resumeLink}>Resume</a></li>
+      <ul class="grid grid-cols-2 mt-10 gap-5 opacity-80 text-theme-text">
+        <li><a class="text-body2" href="/">Design</a></li>
+        <li>
+          <a href="/publications/" class="text-body2">Publications</a>
+        </li>
+        <li><a class="text-body2" href="/about/">About</a></li>
+
+        <li>
+          <a class="text-body2" href={linkedInLink}>LinkedIn</a>
+        </li>
+        <li>
+          <a class="text-body2" href={linkedInLink}>Full CV</a>
+        </li>
       </ul>
     </div>
   </div>
 
-  <div class="mt-16 mb-8 divider-light"></div>
+  <div class="mt-16 mb-8 divider"></div>
   <!-- Stamps -->
-  <div class="w-full flex justify-between mb-8">
-    <p class="text-sm font-light">© 2024 Alan Christian</p>
-    <p class="text-sm font-light">Crafted with my own hands🫶</p>
+  <div class="w-full flex justify-between mb-8 text-theme-text">
+    <p class="text-caption1 font-light">© 2025 Alan Christian</p>
+    <p class="text-caption1 font-light">Crafted with my own hands🫶</p>
   </div>
 </footer>

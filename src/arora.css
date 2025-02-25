@@ -1,0 +1,84 @@
+@tailwind components;
+
+
+@layer components {
+    .arora-container {
+        @apply w-full h-full absolute -z-10;
+    }
+
+
+    .arora-container .arora-item {
+        @apply absolute;
+        animation: arora-item 10s ease-in-out infinite;
+    }
+
+    @keyframes arora-item {
+        0% {
+            transform: scale(1) translate(0, 0);
+            opacity: 0.08;
+        }
+
+        25% {
+            transform: scale(1.5) translate(calc(5000px * (1 - 2 * random())), calc(5000px * (1 - 2 * random()))) rotate(calc(360deg * random()));
+            opacity: 0.1;
+        }
+
+        50% {
+            transform: scale(2) translate(calc(12000px * (1 - 2 * random())), calc(12000px * (1 - 2 * random()))) rotate(calc(360deg * random()));
+            opacity: 0.15;
+        }
+
+        75% {
+            transform: scale(1.5) translate(calc(16000px * (1 - 2 * random())), calc(16000px * (1 - 2 * random())));
+            opacity: 0.1;
+        }
+
+        100% {
+            transform: scale(1) translate(0, 0);
+            opacity: 0.08;
+        }
+    }
+
+
+
+
+    .arora-container .arora-item:nth-child(1) {
+        @apply absolute w-[80rem] h-[40rem] bg-gradient-to-tr from-[#FF0080] via-[#7928CA] to-[#FF4D4D] rounded-full top-[50%] left-[10%] blur-3xl;
+    }
+
+    .arora-container .arora-item:nth-child(2) {
+        @apply absolute w-[25rem] h-[35rem] bg-gradient-to-bl from-[#C463A7] via-[#ED6D60] to-[#EBBA65] rounded-full top-[-40%] left-[20%] blur-3xl opacity-40;
+    }
+
+    .arora-container .arora-item:nth-child(3) {
+        @apply absolute w-[40rem] h-[40rem] bg-gradient-to-tl from-[#ED6D60] via-[#D4ADB2] to-[#7EB9CF] rounded-full bottom-[10%] left-[40%] blur-3xl opacity-30;
+    }
+
+    .arora-container .arora-item:nth-child(4) {
+        @apply absolute w-[40rem] h-[40rem] bg-gradient-to-tl from-[#EBBA65] via-[#C463A7] to-[#7EB9CF] rounded-full top-[20%] right-[20%] blur-3xl opacity-20;
+    }
+
+    .arora-container .arora-item:nth-child(5) {
+        @apply absolute w-[40rem] h-[40rem] bg-gradient-to-tl from-[#C463A7] via-[#D4ADB2] to-[#EBBA65] rounded-full top-[50%] right-[-10%] blur-3xl opacity-20;
+    }
+
+    .arora-container .arora-item:nth-child(6) {
+        @apply absolute w-[40rem] h-[40rem] bg-gradient-to-tl from-[#7EB9CF] via-[#ED6D60] to-[#EBBA65] rounded-full top-[10%] left-[-10%] blur-3xl opacity-20;
+    }
+
+    .arora-container .arora-item:nth-child(7) {
+        @apply absolute w-[40rem] h-[40rem] bg-gradient-to-tl from-[#EBBA65] via-[#ED6D60] to-[#C463A7] rounded-full top-[15%] right-[-10%] blur-3xl opacity-10;
+    }
+
+    .arora-container .arora-item:nth-child(8) {
+        @apply absolute w-[40rem] h-[40rem] bg-gradient-to-tl from-[#7EB9CF] via-[#D4ADB2] to-[#C463A7] rounded-full bottom-[40%] left-[20%] blur-3xl opacity-30;
+    }
+
+    .arora-container .arora-item:nth-child(9) {
+        @apply absolute w-[40rem] h-[40rem] bg-gradient-to-tl from-[#C463A7] via-[#7EB9CF] to-[#ED6D60] rounded-full top-[30%] right-[40%] blur-3xl opacity-40;
+    }
+
+    .arora-container .arora-item:nth-child(10) {
+        @apply absolute w-[40rem] h-[40rem] bg-gradient-to-tl from-[#ED6D60] via-[#D4ADB2] to-[#EBBA65] rounded-full top-[0%] right-[50%] blur-3xl opacity-40;
+    }
+}

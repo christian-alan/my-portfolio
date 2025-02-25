@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import MoonIcon from "../assets/icons/Moon.svg";
+import SunIcon from "../assets/icons/Sun.svg";
+
+const { id } = Astro.props;
+---
+
+<button 
+  id={id} 
+  class="rounded-full p-3 bg-theme-btn"
+  style="-webkit-tap-highlight-color: transparent; -moz-tap-highlight-color: transparent;"
+>
+  <Image
+    src={MoonIcon}
+    alt="Theme Icon"
+    id="moon-theme" 
+    class="block dark:hidden"
+    style="-webkit-user-drag: none; -moz-user-drag: none;"
+  />
+  <Image
+    src={SunIcon}
+    alt="Theme Icon"
+    id="sun-theme"
+    class="hidden dark:block"
+    style="-webkit-user-drag: none; -moz-user-drag: none;"
+  />
+</button>

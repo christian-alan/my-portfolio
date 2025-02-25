@@ -1,0 +1,101 @@
+---
+import "./../main.css";
+import "./../arora.css";
+import { ClientRouter } from "astro:transitions";
+import { Particles } from "../components/magicui/particles";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ClientRouter />
+  </head>
+  <body
+    id="microblog-body"
+    class="bg-bkg relative
+    desktop:w-screen desktop:h-screen desktop:relative desktop:overflow-x-clip
+    smalldesktop:w-screen smalldesktop:h-screen smalldesktop:relative smalldesktop:overflow-x-clip
+    tablet:w-screen tablet:h-screen tablet:relative tablet:overflow-x-clip
+    mobile:w-screen mobile:h-screen mobile:relative mobile:overflow-x-clip"
+  >
+    <div class="arora-container">
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+      <div class="arora-item"></div>
+    </div>
+
+    <Particles
+      className="absolute inset-0"
+      client:load
+      quantity={300}
+      ease={100}
+      color={"#F8A67B"}
+      refresh
+    />
+    <div
+      class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 overflow-y-auto
+      desktop:py-10
+      smalldesktop:py-10
+      tablet:py-10
+      mobile:py-10"
+    >
+      <button
+        onclick="window.history.back()"
+        class="absolute top-4 right-4 p-2 text-theme-text bg-bkg hover:text-theme-text/50 hover:bg-bkg/50 rounded-full transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <div class="min-h-screen flex items-center justify-center p-4">
+        <div class="bg-bkg rounded-lg shadow-xl max-w-7xl w-full relative">
+          <slot />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+  const userTheme = localStorage.getItem("theme");
+  const setTheme = () => {
+    if (userTheme) {
+      document.documentElement.setAttribute("data-theme", userTheme);
+    } else {
+      document.documentElement.setAttribute("data-theme", systemTheme);
+    }
+  };
+
+  setTheme();
+</script>

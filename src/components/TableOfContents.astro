@@ -1,0 +1,75 @@
+---
+interface Props {
+  items: {
+    slug: string;
+    text: string;
+  }[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="col-span-1 relative">
+  <div class="sticky top-28 flex flex-col gap-5" style="height: fit-content;">
+    <div class="w-full flex flex-row justify-end">
+      <ul class="flex flex-col gap-1 font-DM text-right font-bold">
+        On this page
+        {
+          items.map((item) => (
+            <li key={item.slug}>
+              <a
+                href={`#${item.slug}`}
+                class="text-right opacity-50 font-medium text-theme-text transition-colors duration-200 text-caption1"
+              >
+                {item.text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  ul {
+    list-style-type: none;
+  }
+
+  li a {
+    display: block;
+    padding: 0.25rem 0;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const links = document.querySelectorAll("ul li a");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const link = document.querySelector(
+            `ul li a[href="#${entry.target.id}"]`,
+          );
+
+          if (entry.isIntersecting) {
+            link?.classList.add("active");
+          } else {
+            link?.classList.remove("active");
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+      },
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  });
+</script>

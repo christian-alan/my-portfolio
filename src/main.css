@@ -1,81 +1,87 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --humana: linear-gradient(
-    to right,
-    #c463a7 0%,
-    #ed6d60 25%,
-    #ebba65 50%,
-    #d4adb2 75%,
-    #7eb9cf 100%
-  );
-  --glass-background: blur(4px);
-  --border-light: linear-gradient(
-    to right,
-    #00000010 0%,
-    #00000080 50%,
-    #00000010 100%
-  );
-}
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @layer base {
-
-  a{
-    @apply desktop:text-xl smalldesktop:text-xl tablet:text-xl mobile:text-sm;
+  :root {
+    --humana: linear-gradient(to right,
+        #c463a7 0%,
+        #ed6d60 25%,
+        #ebba65 50%,
+        #d4adb2 75%,
+        #7eb9cf 100%);
+    --glass-background: blur(64px);
   }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-bg: 30deg 100% 96%;
+      --color-theme-btn: 0deg 0% 8%;
+      --color-theme-text: 0deg 0% 8%;
+      --border: linear-gradient(to right,
+          #00000010 0%,
+          #00000080 50%,
+          #00000010 100%);
+
+    }
+  }
+
+  :root[data-theme="light"] {
+    --color-bg: 30deg 100% 96%;
+    --color-theme-btn: 0deg 0% 8%;
+    --color-theme-text: 0deg 0% 8%;
+    --border: linear-gradient(to right,
+        #00000010 0%,
+        #00000080 50%,
+        #00000010 100%);
+
+  }
+
+  :root[data-theme="dark"] {
+    --color-bg: 0deg 0% 8%;
+    --color-theme-btn: 30deg 100% 96%;
+    --color-theme-text: 30deg 100% 96%;
+    --border: linear-gradient(to right,
+        #ffffff10 0%,
+        #ffffff80 50%,
+        #ffffff10 100%);
+  }
+
+  .divider {
+    @apply w-full;
+    background-image: var(--border);
+    height: 0.5px;
+  }
+
+  a {
+    @apply desktop:text-body1 smalldesktop:text-body1 tablet:text-body1 mobile:text-caption1;
+  }
+
   ul {
-    @apply font-raleway;
+    @apply font-DM;
   }
 
-  h1 {
-    @apply desktop:text-6xl smalldesktop:text-5xl tablet:text-4xl mobile:text-4xl font-playfair font-extrabold;
-  }
-  h2 {
-    @apply desktop:text-4xl smalldesktop:text-4xl tablet:text-4xl mobile:text-3.5xl font-playfair;
-  }
-  h3 {
-    @apply text-3xl font-playfair;
-  }
-  h4 {
-    @apply text-2xl font-playfair;
-  }
-  h5 {
-    @apply text-xl font-raleway font-bold;
-  }
-  p {
-    @apply desktop:text-xl smalldesktop:text-xl tablet:text-xl mobile:text-lg font-raleway font-medium;
-  }
   nav {
-    /* @apply desktop:mx-24 smalldesktop:mx-20 tablet:mx-12 mobile:mx-10; */
+    @apply desktop:px-28;
   }
+
   .common-container {
-    @apply desktop:mx-60 smalldesktop:mx-40 tablet:mx-32 mobile:mx-5;
+    @apply desktop:px-28 smalldesktop:px-28 tablet:px-28 mobile:px-8;
   }
+
   .noise-bg {
     background: url("./assets/Noise.png");
+    background-opacity: 0.2;
   }
 
   .img-blob {
-    @apply object-cover rounded-xl w-full desktop:h-[44rem] smalldesktop:h-[44rem] tablet:h-[36rem] mobile:h-[20rem];
+    @apply object-cover w-full desktop:h-[32rem] smalldesktop:h-[32rem] tablet:h-[32rem] mobile:h-[20rem];
     box-shadow: 0px 5px 36px #2f303930;
-  }
-  .img-dev-blob {
-    @apply object-cover rounded-xl w-full h-auto;
-  }
-
-  .img-dev-card {
-    @apply  rounded-xl w-full h-auto p-5;
-    box-shadow: 0px 5px 36px #2f303930;
-  }
-  .divider-light {
-    @apply w-full;
-    background-image: var(--border-light);
-    height: 0.5px;
   }
 
   img,
@@ -94,65 +100,82 @@
   .cowrite-shadow {
     box-shadow: 0px 4px 44px #8bda9124;
   }
+
 }
 
 @layer components {
   .humana-gradient {
     background-image: var(--humana);
   }
+
   .roe-gif {
-    background-image: url("./assets/Rogan.gif");
+    background-image: url("./assets/background/Rogan.gif");
     background-repeat: no-repeat;
     background-size: contain;
   }
+
   .boe-gif {
-    background-image: url("./assets/Bogan.gif");
+    background-image: url("./assets/background/Bogan.gif");
     background-repeat: no-repeat;
     background-size: contain;
+
   }
+
   .nav-bar {
-    @apply px-6 py-3 relative flex justify-center items-center;
-    border-radius: 1000px;
+    @apply relative flex items-center w-full desktop:common-container desktop:py-3 desktop:justify-between smalldesktop:common-container smalldesktop:py-3 smalldesktop:justify-between tablet:common-container tablet:py-3 tablet:justify-between mobile:common-container mobile:py-3 mobile:justify-between;
     backdrop-filter: var(--glass-background);
-    border-radius: 1000px;
+
   }
-  .nav-bar:before {
-    @apply bg-light;
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 1000px;
-    z-index: -1;
-  }
+
   .nav-bar:after {
     content: "";
     position: absolute;
-    height: 107%;
-    width: 101.5%;
-    border-radius: 1000px;
+    left: 0px;
+    bottom: 1px;
+    height: 2%;
+    width: 100%;
     background-image: var(--humana);
-    z-index: -2;
-  }
 
-  /* Principle boxes */
-  .principle-box {
-    @apply relative flex justify-center items-center;
-    background-color: white;
-    height: 120px;
-    width: 120px;
-    border-radius: 36px;
-  }
-
-  .principle-box:after {
-    content: "";
-    position: absolute;
-    height: 102%;
-    width: 102%;
-    border-radius: 36px;
-    background-image: var(--humana);
     z-index: -1;
+  }
+
+  .skills {
+    @apply p-3 border-[0.5px] border-opacity-20 flex flex-col justify-between;
+    border-image: var(--humana) 1;
+
+    backdrop-filter: var(--glass-background);
+
+  }
+
+  .skills [dark-theme="dark"] {
+    @apply bg-black;
+  }
+
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-@layer utilities {}
+
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+
+  }
+  body {
+    @apply bg-background text-foreground;
+
+  }
+
+}

@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+const { title, image, icon, id } = Astro.props;
+---
+
+<div class="flex flex-col gap-4">
+  <Image
+    id={id}
+    class=`cursor-pointer 
+    desktop:col-span-1 desktop:h-[30rem] desktop:img-blob 
+    smalldesktop:col-span-2 smalldesktop:h-[24rem] smalldesktop:img-blob 
+    tablet:w-full tablet:img-blob 
+    mobile:w-full mobile:img-blob`
+    src={image}
+    alt="cowrite's placeholder"
+    style="transition-duration:0.4s"
+  />
+  <div class="flex flex-row gap-2 items-center">
+    <Image
+      src={icon}
+      height={40}
+      width={40}
+      class="rounded-full"
+      alt="cowrite's placeholder"
+    />
+    <p class="text-body1 font-DM font-bold text-theme-text">
+      {title}
+    </p>
+  </div>
+</div>
+<script>
+  const project = document.getElementById("{id}");
+
+  project.addEventListener("click", () => {
+    window.location.href = `/projects/${id}/`;
+  });
+</script>

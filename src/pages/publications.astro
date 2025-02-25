@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Publications from "../components/Publications.astro";
+import MasterThesis from "../assets/publications/Thesis.jpg";
+---
+
+<Layout title="Alan Christian">
+  <main class="common-container noise-bg">
+    <section
+      class="desktop:pt-60 desktop:pb-24 desktop:items-center desktop:relative desktop:flex desktop:flex-col desktop:gap-10
+      smalldesktop:pt-60 pb-24 smalldesktop:items-center smalldesktop:flex-col smalldesktop:relative
+      tablet:pt-52 tablet:pb-24 table:flex-col tablet:items-center tablet:justify-center tablet:relative
+      mobile:pt-52 mobile:pb-24 mobile:flex-col mobile:items-center mobile:justify-center mobile:relative"
+    >
+      <Publications
+        title="Can a Social Robot foster inclusive collaboration?"
+        author="Alan Christian"
+        date="20 September 2024"
+        category="Master's Thesis"
+        cover={MasterThesis}
+        link="https://uu.diva-portal.org/smash/record.jsf?pid=diva2%3A1899787&dswid=7549"
+        description="An empirical study on the efficacy of Social Robots in collaborative learning scenarios. This thesis evaluates how autonomous social robots foster inclusive collaboration in group learning, comparing autonomous and tele-operated modes. "
+      />
+    </section>
+
+    <div class="divider my-16"></div>
+    <!-- Footer -->
+    <Footer />
+  </main>
+</Layout>
+<style></style>
+
+<script></script>

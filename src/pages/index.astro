@@ -1,328 +1,324 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
-import Card from "../components/Card.astro";
-import { Image } from "astro:assets";
-import DesirableSVG from "../assets/icons/Desirable.svg";
-import FunctionalSVG from "../assets/icons/Functional.svg";
-import HumanizedSVG from "../assets/icons/Humanized.svg";
-import SelfExplainatorySVG from "../assets/icons/SelfExplainatory.svg";
 import CowriteCover from "../assets/cowrite/Index.jpg";
-import FurhatCover from "../assets/furhat/Index.jpg"; 
-import DropDownCover from '../assets/dropdown/Cover.jpg';
-import SpotifyCover from '../assets/spotify/Cover.jpg';
-import FurhatCoverMT from '../assets/furhat/Cover-mt.jpg'
+import FurhatCover from "../assets/furhat/Index.jpg";
+import DropDownCover from "../content/projects/DropDownCover.jpg";
+import CowriteIcon from "../assets/cowrite/Icon.svg";
+import FurhatIcon from "../assets/furhat/Icon.svg";
+import DropDownIcon from "../assets/dropdown/Icon.svg";
+import Microblog from "../components/Microblogs.astro";
+import DummyOne from "../content/microblogs/DesignHeuristics.png";
+import DummyTwo from "../content/microblogs/Interfaces.png";
+import DummyThree from "../content/microblogs/Interaction.png";
+import Project from "../components/Project.astro";
+import CHIACover from "../assets/chia/CHIA.png";
+import CHIAIcon from "../assets/chia/chiaIcon.svg";
+import { Meteors } from "../components/magicui/meteors";
 ---
 
 <Layout title="Alan Christian">
-  <main class="common-container" class="bg-light">
+  <main class="common-container noise-bg">
     <!-- Hero section -->
     <section
-      class="desktop:pt-80 desktop:pb-50 desktop:flex-row desktop:items-center desktop:relative
-        smalldesktop:py-80 smalldesktop:items-center smalldesktop:flex-row smalldesktop:relative
-        tablet:pt-52 tablet:pb-24 table:flex-col tablet:items-center tablet:justify-center tablet:relative
-        mobile:pt-52 mobile:pb-24 mobile:flex-col mobile:items-center mobile:justify-center mobile:relative"
+      class="mobile:pt-52 mobile:pb-0 mobile:flex mobile:flex-col mobile:items-center mobile:justify-center mobile:relative mobile:gap-20
+      tablet:pt-52 tablet:pb-0 tablet:flex-col tablet:items-center tablet:justify-center tablet:relative tablet:gap-20
+      smalldesktop:pt-72 smalldesktop:pb-60 smalldesktop:justify-between smalldesktop:flex-row smalldesktop:relative smalldesktop:gap-10 smalldesktop:items-center
+      desktop:pt-60 desktop:pb-44 desktop:flex-row desktop:justify-between desktop:relative desktop:gap-10 desktop:items-center"
     >
-      <div class="desktop:w-full tablet:w-full mobile:w-full">
-        <h1
-          class="text-dark desktop:text-left smalldesktop:text-left mobile:text-center tablet:text-center"
-        >
-          Designing technology <br
-            class="mobile:hidden tablet:hidden desktop:block smalldesktop:block"
-          />
-          to feel more <span class="humana-gradient text-dark/0 bg-clip-text"
-            >human.</span
-          >
-        </h1>
-        <p
-          class="text-dark text-2xl  opacity-70 mt-10 desktop:text-left smalldesktop:text-left mobile:text-center tablet:text-center"
-        >
-          Hej, I’m Alan. I am a 
-		  	<span id="role-italic" class="relative font-playfair italic">
-				UI/UX designer and frontend developer
-			</span>
-          <br
-            class="mobile:hidden tablet:hidden desktop:block smalldesktop:block"
-          /> that designs and builds delightful interfaces to drive business success.
-		</p>
-      </div>
       <div
-        class="
-        boe-gif 
-        desktop:w-1/4 desktop:absolute desktop:top-64 desktop:right-0 desktop:h-96 
-        smalldesktop:absolute smalldesktop:right-0 smalldesktop:top-64 smalldesktop:w-1/4 smalldesktop:h-96
-        tablet:w-4/5 tablet:h-96 tablet:mx-auto
-        mobile:w-4/5 mobile:h-96 mobile:mx-auto
-        "
+        class="w-full
+        desktop:w-3/5
+        smalldesktop:w-3/5
+        tablet:w-full
+        mobile:w-full"
       >
-      </div>
-    </section>
-
-    <div class="divider-light"></div>
-
-    <!-- My design principles  -->
-    <section
-      class="desktop:py-48 relative desktop:flex-col desktop:flex
-      smalldesktop:py-44 smalldesktop:flex  smalldesktop:flex-col
-      tablet:py-32 tablet:flex tablet:flex-col 
-      mobile:pt-16 mobile:pb-32 mobile:flex mobile:flex-col
-      "
-    >
-      <!-- Header -->
-      <div class="
-      desktop:flex desktop:flex-row desktop:items-center desktop:gap-5 desktop:justify-start
-      smalldesktop:flex smalldesktop:flex-row smalldesktop:items-center smalldesktop:gap-5 smalldesktop:justify-start
-      tablet:flex tablet:flex-col tablet:items-center tablet:justify-center tablet:gap-5
-      mobile:flex mobile:flex-col mobile:items-center mobile:justify-center mobile:gap-5
-      ">
-        <h3 class="font-bold text-dark">My design principles</h3>
-        <div class="h-0.5 w-32 bg-dark"></div>
+        <p
+          class="text-theme-text text-subtitle1
+        mobile:text-center
+        tablet:text-center
+        smalldesktop:text-left
+        desktop:text-left"
+        >
+          Design Engineer
+        </p>
+        <h1
+          class="text-theme-text font-playfair
+          mobile:text-center mobile:text-title2
+          tablet:text-center tablet:text-title2
+          smalldesktop:text-left smalldesktop:text-title2
+          desktop:text-left desktop:text-title1"
+        >
+          Hey, I'm Alan Christian! <br />I design and develop software
+        </h1>
       </div>
 
-      <p class="text-dark text-xl mt-4 opacity-80">
-        After spending 4 years working in the industry doing a Masters in HCI, I
-        have learned to keep the user human at the centre of it all. Some
-        qualities that I see are crucial to good design experiences:
-      </p>
-
-      <!-- Principles -->
-      <div class="desktop:mt-20 desktop:flex desktop:flex-row desktop:gap-10 desktop:items-start
-        smalldesktop:mt-20 smalldesktop:flex smalldesktop:flex-row smalldesktop:gap-10 smalldesktop:items-start
-        tablet:mt-20 tablet:flex tablet:flex-col tablet:gap-10 tablet:items-center
-        mobile:mt-20 mobile:flex mobile:flex-col mobile:gap-10 mobile:items-center
-      ">
-        <!-- Principle one -->
-        <div class="
-          desktop:w-1/4 desktop:flex desktop:flex-col desktop:items-start desktop:justify-start
-          smalldesktop:w-1/4 smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start smalldesktop:justify-start
-          tablet:w-full tablet:flex tablet:flex-col tablet:items-center tablet:justify-center
-          mobile:w-full mobile:flex mobile:flex-col mobile:items-center mobile:justify-center
-          ">
-          <div class="principle-box">
-            <Image src={FunctionalSVG} alt="Functional" />
+      <div
+        class="flex flex-col
+        mobile:w-4/5 mobile:h-96 mobile:mx-auto mobile:items-center mobile:gap-2
+        tablet:w-4/5 tablet:h-96 tablet:mx-auto tablet:items-center tablet:gap-2
+        smalldesktop:w-2/5 smalldesktop:absolute smalldesktop:right-0 smalldesktop:top-64 smalldesktop:items-end
+        desktop:w-2/5 desktop:absolute desktop:top-48 desktop:right-0 desktop:items-end"
+      >
+        <div
+          class="bg-orange dark:bg-orange-dark rounded-full
+        desktop:w-72
+        tablet:w-64
+        smalldesktop:w-68
+        mobile:w-48"
+        >
+          <div
+            style="transform: rotateY(180deg)"
+            class="boe-gif
+            mobile:h-48
+            tablet:h-64
+            smalldesktop:h-68
+            desktop:h-72"
+          >
           </div>
-          <h4 class="font-bold text-dark mt-6">Functional</h4>
-          <p class="text-dark text-xl mt-4 opacity-80
-           desktop:text-left smalldesktop:text-left tablet:text-center mobile:text-center">
-            Simple yet efficient and doing what it’s supposed to do.
-          </p>
         </div>
-
-        <!-- Principle two -->
-        <div class="
-          desktop:w-1/4 desktop:flex desktop:flex-col desktop:items-start desktop:justify-start
-          smalldesktop:w-1/4 smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start smalldesktop:justify-start
-          tablet:w-full tablet:flex tablet:flex-col tablet:items-center tablet:justify-center
-          mobile:w-full mobile:flex mobile:flex-col mobile:items-center mobile:justify-center
-          ">
-          <div class="principle-box">
-            <Image src={SelfExplainatorySVG} alt="Functional" />
-          </div>
-          <h4 class="font-bold text-dark mt-6">Self explanatory</h4>
-          <p class="text-dark text-xl mt-4 opacity-80
-           desktop:text-left smalldesktop:text-left tablet:text-center mobile:text-center">
-            A product should teach its users how to use it.
+        <div
+          class="mobile:text-center
+          tablet:text-center
+          smalldesktop:text-right
+          desktop:text-right"
+        >
+          <p
+            class="text-theme-text text-subtitle1 hover:underline transition-all hover:scale-105 duration-600 cursor-pointer"
+          >
+            Say hello! ↗
           </p>
-        </div>
-
-        <!-- Principle three -->
-        <div class="
-          desktop:w-1/4 desktop:flex desktop:flex-col desktop:items-start desktop:justify-start
-          smalldesktop:w-1/4 smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start smalldesktop:justify-start
-          tablet:w-full tablet:flex tablet:flex-col tablet:items-center tablet:justify-center
-          mobile:w-full mobile:flex mobile:flex-col mobile:items-center mobile:justify-center
-        ">
-          <div class="principle-box">
-            <Image src={DesirableSVG} alt="Functional" />
-          </div>
-          <h4 class="font-bold text-dark mt-6">Desirable</h4>
-          <p class="text-dark text-xl mt-4 opacity-80
-           desktop:text-left smalldesktop:text-left tablet:text-center mobile:text-center">
-            Keeping it simple and playful. Focus on the things that bring
-            delight to user. Something that keep them coming back.
-          </p>
-        </div>
-
-        <!-- Principle four -->
-        <div class="
-          desktop:w-1/4 desktop:flex desktop:flex-col desktop:items-start desktop:justify-start
-          smalldesktop:w-1/4 smalldesktop:flex smalldesktop:flex-col smalldesktop:items-start smalldesktop:justify-start
-          tablet:w-full tablet:flex tablet:flex-col tablet:items-center tablet:justify-center
-          mobile:w-full mobile:flex mobile:flex-col mobile:items-center mobile:justify-center
-        ">
-          <div class="principle-box">
-            <Image src={HumanizedSVG} alt="Functional" />
-          </div>
-          <h4 class="font-bold text-dark mt-6">Humanized experience</h4>
-          <p class="
-          text-dark text-xl mt-4 opacity-80
-          desktop:text-left smalldesktop:text-left tablet:text-center mobile:text-center">
-            “To err is human, to forgive, divine.” Designing experiences with
-            humans is mind.
+          <p class="text-theme-text text-subtitle1 font-playfair italic">
+            Scroll to check my work
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Featured projects  -->
-    <section class="desktop:py-20 smalldesktop:py-20 tablet:pt-24 tablet:pb-24 mobile:pt-24 mobile:pb-24 ">
-      <!-- Header -->
-      <div class="desktop:flex desktop:flex-row desktop:items-center desktop:gap-5 desktop:justify-start
-      smalldesktop:flex smalldesktop:flex-row smalldesktop:items-center smalldesktop:gap-5 smalldesktop:justify-start
-      tablet:flex tablet:flex-col tablet:items-center tablet:justify-center tablet:gap-5
-      mobile:flex mobile:flex-col mobile:items-center mobile:justify-center mobile:gap-5">
-        <h3 class="font-bold text-dark">UX work 📏 ✏️</h3>
-        <div class="h-0.5 w-32 bg-dark"></div>
-      </div>
-
+    <section class="">
       <!-- Projects -->
-      <div class="desktop:grid desktop:grid-cols-3 desktop:gap-10 desktop:mt-10
-      smalldesktop:grid smalldesktop:grid-cols-3 smalldesktop:gap-10 smalldesktop:mt-10
-      tablet:flex tablet:flex-col tablet:gap-10 tablet:mt-10
-      mobile:flex mobile:flex-col mobile:gap-10 mobile:mt-10
-      
-      ">
-        <Image
+      <div
+        class="mobile:flex mobile:flex-col mobile:gap-10 mobile:mt-10
+        tablet:flex tablet:flex-col tablet:gap-10 tablet:mt-10
+        smalldesktop:grid smalldesktop:grid-cols-2 smalldesktop:gap-10 smalldesktop:mt-10
+        desktop:grid desktop:grid-cols-2 desktop:gap-10 desktop:mt-10"
+      >
+        <Project
           id="cowrite"
-          class=`cursor-pointer desktop:col-span-2 desktop:img-blob 
-          smalldesktop:col-span-2 smalldesktop:img-blob 
-          tablet:w-full tablet:img-blob 
-          mobile:w-full mobile:img-blob 
-          `
-          src={CowriteCover}
-          alt="cowrite's placeholder"
-          style="transition-duration:0.4s"
+          title="The writer's companion"
+          subtitle="Cowrite's placeholder"
+          image={CowriteCover}
+          icon={CowriteIcon}
         />
-  
-        <Image
-        id="furhat"
-        class=`cursor-pointer desktop:col-span-1 desktop:img-blob 
-        smalldesktop:col-span-1 smalldesktop:img-blob 
-        tablet:w-full tablet:img-blob 
-        mobile:w-full mobile:img-blob 
-        `
-        src={FurhatCover}
-        alt="furhat's placeholder"
-        style="transition-duration:0.2s"
-      />
-
-      </div>
-    </section>
-
-     <!-- Featured Frontend projects  -->
-     <section class="desktop:py-16 relative smalldesktop:py-16 tablet:py-16 mobile:py-12">
-      <!-- Header -->
-      <div class="   
-      desktop:flex desktop:flex-row desktop:items-center desktop:gap-5 desktop:justify-start
-      smalldesktop:flex smalldesktop:flex-row smalldesktop:items-center smalldesktop:gap-5 smalldesktop:justify-start
-      tablet:flex tablet:flex-col tablet:items-center tablet:justify-center tablet:gap-5
-      mobile:flex mobile:flex-col mobile:items-center mobile:justify-center mobile:gap-5">
-        <h3 class="font-bold text-dark">Dev work 🦄</h3>
-        <div class="h-0.5 w-32 bg-dark"></div>
-      </div>
-
-      <!-- Projects -->
-      <div class="desktop:grid desktop:grid-cols-2 desktop:gap-10 desktop:mt-10
-      smalldesktop:grid smalldesktop:grid-cols-2 smalldesktop:gap-10 smalldesktop:mt-10
-      tablet:flex tablet:flex-col tablet:gap-10 tablet:mt-10
-      mobile:flex mobile:flex-col mobile:gap-10 mobile:mt-10
-      
-      ">
-      <div class="col-span-1 flex flex-col img-dev-card items-center gap-5 bg-white">
-        <Image
-          id="drop-down"
-          
-          class=`desktop:col-span-1 desktop:img-dev-blob desktop:cursor-pointer
-          smalldesktop:col-span-1 smalldesktop:img-dev-blob smalldesktop:cursor-pointer
-          tablet:w-full tablet:img-dev-blob tablet:cursor-pointer
-          mobile:w-full mobile:img-dev-blob mobile:cursor-pointer
-          `
-          src={DropDownCover}
-          alt="Drop Down placeholder"
-          style="transition-duration:0.4s"
+        <Project
+          id="furhat"
+          title="Teleoperator"
+          subtitle="Furhat's placeholder"
+          image={FurhatCover}
+          icon={FurhatIcon}
         />
-        <div class="flex flex-col items-center gap-2"> 
-          <h4 class="text-sm text-dark"> BY ALAN CHRISTIAN</h4>
-          <p class="text-center text-dark desktop:text-lg smalldesktop:text-lg tablet:text-lg mobile:text-sm font-bold"> A roadmap to building a reusable drop-down component in Astro & Vue</p>
+        <Project
+          id="dropdown"
+          title="UI component"
+          subtitle="Drop Down placeholder"
+          image={DropDownCover}
+          icon={DropDownIcon}
+        />
+        <Project
+          title="CHIA"
+          id="chia"
+          subtitle="Cowrite's placeholder"
+          image={CHIACover}
+          icon={CHIAIcon}
+        />
+
+<!--         
+        <Project
+          title="Charlie"
+          subtitle="Cowrite's placeholder"
+          image={CowriteCover}
+          icon={CowriteIcon}
+        /> -->
+
+        <!-- <Project
+          title="Coupon app"
+          subtitle="Coupon app's placeholder"
+          image={CowriteCover}
+          icon={CowriteIcon}
+        />
+
+        <Project
+          title="Cool Dashboard"
+          subtitle="Dashboard's placeholder"
+          image={FurhatCover}
+          icon={FurhatIcon}
+        /> -->
+      </div>
+
+      <div class="divider my-16"></div>
+      <!-- My design principles  -->
+      <section
+        class="relative flex flex-col items-center justify-center gap-10 pb-32
+        tablet:flex tablet:flex-col tablet:items-center tablet:justify-center tablet:gap-10
+        smalldesktop:flex smalldesktop:flex-col smalldesktop:items-center smalldesktop:justify-center smalldesktop:gap-10
+        desktop:flex-col desktop:flex desktop:items-center desktop:justify-center desktop:gap-20"
+      >
+        <Meteors 
+        client:load
+        className="absolute -z-10" 
+        number={15} 
+        minDelay={0.1} 
+        maxDelay={1.2} 
+        minDuration={2} 
+        maxDuration={10} 
+        angle={215} />
+
+        <h1
+          class="text-theme-text font-playfair font-thin
+          desktop:text-title2 desktop:text-left
+          smalldesktop:text-title2 smalldesktop:text-left
+          tablet:text-title3 tablet:text-center
+          mobile:text-title3 mobile:text-center"
+        >
+          Design philosophy
+        </h1>
+
+        <div
+          id="design-philosophy"
+          class="grid grid-cols-1 gap-10
+          tablet:grid-cols-2
+          smalldesktop:grid-cols-3
+          desktop:grid-cols-3"
+        >
+          <Microblog
+            title="Design heuristics"
+            subtitle="Simple yet efficient and doing what it's supposed to do."
+            id="heuristics"
+            image={DummyOne}
+          />
+
+          <Microblog
+            title="What's an interface?"
+            subtitle="Keeping it simple and playful. Focus on the things that bring delight to user."
+            id="interface"
+            image={DummyTwo}
+          />
+
+          <Microblog
+            title="What is interaction?"
+            subtitle="Keeping it simple and playful. Focus on the things that bring delight to user."
+            id="interaction"
+            image={DummyThree}
+          />
         </div>
+      </section>
+      <div class="divider my-16"></div>
 
-      </div>
-      <!-- <div class="col-span-1 flex flex-col img-dev-card items-center gap-5 bg-white">
-        <Image
-          id="drop-down"
-          class=`desktop:col-span-1 desktop:img-dev-blob desktop:cursor-pointer
-          smalldesktop:col-span-1 smalldesktop:img-dev-blob smalldesktop:cursor-pointer
-          tablet:w-full tablet:img-dev-blob tablet:cursor-pointer
-          mobile:w-full mobile:img-dev-blob mobile:cursor-pointer
-          `
-          src={SpotifyCover}
-          alt="spotify placeholder"
-          style="transition-duration:0.4s"
-        />
-        <div class="flex flex-col items-center gap-2">
-          <h4 class="text-sm text-dark"> BY ALAN CHRISTIAN</h4>
-          <p class="text-center text-dark font-bold desktop:text-lg smalldesktop:text-lg tablet:text-lg mobile:text-sm "> A knock off of spotify in Astro & Vue</p>
-        </div> 
-      </div> -->
-      
-      </div>
+      <!-- Footer -->
+      <Footer />
     </section>
-
-    <div class="divider-light my-16"></div>
-
-    <!-- Footer -->
-    <Footer />
   </main>
+  <script>
+    const cowriteBlog = document.getElementById("cowrite");
+    const componentBlog = document.getElementById("dropdown");
+    const furhatBlog = document.getElementById("furhat");
+    const chiaBlog = document.getElementById("chia");
+    const charlieBlog = document.getElementById("charlie");
+
+    if (cowriteBlog) {
+      cowriteBlog.addEventListener("click", () => {
+        window.location.href = "/projects/cowrite/";
+      });
+      cowriteBlog.addEventListener("mousemove", (event) => {
+        cowriteBlog.style.transform = `perspective(400px) rotateX(${event.layerX / 1000}deg) rotateY(${event.layerY / 1000}deg)`;
+      });
+      cowriteBlog.addEventListener("mouseleave", () => {
+        cowriteBlog.style.transform = `perspective(400px) rotateX(0deg) rotateY(0deg)`;
+      });
+    }
+
+    if (componentBlog) {
+      componentBlog.addEventListener("click", () => {
+        window.location.href = "/projects/dropdown/";
+      });
+      componentBlog.addEventListener("mousemove", (event) => {
+        componentBlog.style.transform = `perspective(300px) rotateX(${event.layerX / 1000}deg) rotateY(${event.layerY / 1000}deg)`;
+      });
+      componentBlog.addEventListener("mouseleave", () => {
+        componentBlog.style.transform = `perspective(300px) rotateX(0deg) rotateY(0deg)`;
+      });
+    }
+
+    if (furhatBlog) {
+      furhatBlog.addEventListener("click", () => {
+        window.location.href = "/projects/furhat/";
+      });
+      furhatBlog.addEventListener("mousemove", (event) => {
+        furhatBlog.style.transform = `perspective(300px) rotateX(${event.layerX / 1000}deg) rotateY(${event.layerY / 1000}deg)`;
+      });
+      furhatBlog.addEventListener("mouseleave", () => {
+        furhatBlog.style.transform = `perspective(300px) rotateX(0deg) rotateY(0deg)`;
+      });
+    }
+
+    if (chiaBlog) {
+      chiaBlog.addEventListener("click", () => {
+        window.location.href = "/projects/chia/";
+      });
+      chiaBlog.addEventListener("mousemove", (event) => {
+        chiaBlog.style.transform = `perspective(300px) rotateX(${event.layerX / 1000}deg) rotateY(${event.layerY / 1000}deg)`;
+      });
+      chiaBlog.addEventListener("mouseleave", () => {
+        chiaBlog.style.transform = `perspective(300px) rotateX(0deg) rotateY(0deg)`;
+      });
+    }
+
+    if (charlieBlog) {
+      charlieBlog.addEventListener("click", () => {
+        window.location.href = "/projects/charlie/";
+      });
+      charlieBlog.addEventListener("mousemove", (event) => {
+        charlieBlog.style.transform = `perspective(300px) rotateX(${event.layerX / 1000}deg) rotateY(${event.layerY / 1000}deg)`;
+      });
+      charlieBlog.addEventListener("mouseleave", () => {
+        charlieBlog.style.transform = `perspective(300px) rotateX(0deg) rotateY(0deg)`;
+      });
+    }
+
+    const designHeuristicsBlog = document.getElementById("heuristics");
+    const whatsAnInterfaceBlog = document.getElementById("interface");
+    const whatIsInteractionBlog = document.getElementById("interaction");
+
+    if (designHeuristicsBlog) {
+      designHeuristicsBlog.addEventListener("click", () => {
+        window.location.href = "/microblogs/heuristics/";
+      });
+    }
+
+    if (whatsAnInterfaceBlog) {
+      whatsAnInterfaceBlog.addEventListener("click", () => {
+        window.location.href = "/microblogs/interface/";
+      });
+    }
+
+    if (whatIsInteractionBlog) {
+      whatIsInteractionBlog.addEventListener("click", () => {
+        window.location.href = "/microblogs/interaction/";
+      });
+    }
+  </script>
+
+  <style>
+    #role-italic:before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 100%;
+      width: 100%;
+      left: 0;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--humana);
+    }
+  </style>
 </Layout>
-<script>
-
-  const cowriteBlog = document.getElementById("cowrite");
-  const componentBlog = document.getElementById("drop-down");
-  const furhatBlog = document.getElementById("furhat");
-
-  cowriteBlog.addEventListener("click", () => {
-    window.location.href = "/cowrite/";
-  });
-  componentBlog.addEventListener("click", () => {
-    window.location.href = "/dropdown/";
-  });
-
-  furhatBlog.addEventListener("click", () => {
-    window.location.href = "/furhat/";
-  });
-
-  // image card animation script
-  cowriteBlog.addEventListener("mousemove",(event)=>{
-    cowriteBlog.style.transform = `perspective(400px) rotateX(${event.layerX/1000}deg) rotateY(${event.layerY/1000}deg)`
-  })
-  cowriteBlog.addEventListener("mouseleave",()=>{
-     cowriteBlog.style.transform = `perspective(400px) rotateX(0deg) rotateY(0deg)`
-  })
-
-  furhatBlog.addEventListener("mousemove",(event)=>{
-    furhatBlog.style.transform = `perspective(300px) rotateX(${event.layerX/1000}deg) rotateY(${event.layerY/1000}deg)`
-  })
-  furhatBlog.addEventListener("mouseleave",()=>{
-     furhatBlog.style.transform = `perspective(300px) rotateX(0deg) rotateY(0deg)`
-  })
-
-
-
-</script>
-
-<style>
-
-	#role-italic:before{
-		display: block;
-		position: absolute;
-		content:'';
-		top: 100%;
-    width: 100%;
-    left: 0;
-    height: 3px;
-		border-radius: 3px;
-		background: var(--humana);
-	}
-
-
-</style>

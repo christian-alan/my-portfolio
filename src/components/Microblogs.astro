@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+const { title, subtitle, image, id } = Astro.props;
+---
+
+<div
+  id={id}
+  class="bg-white hover:scale-105 transition-all duration-300 cursor-pointer"
+>
+  <Image
+    class="object-cover h-[24rem] w-full"
+    src={image}
+    alt="Design Philosophy"
+  />
+
+  <div class="flex flex-col gap-0 p-6 w-full">
+    <h1
+      class="text-dark font-DM font-semibold
+            desktop:text-title4
+            smalldesktop:text-title4
+            tablet:text-body1
+            mobile:text-body1"
+    >
+      {title}
+    </h1>
+    <p
+      class="text-dark font-DM break-words
+            desktop:text-body1
+            smalldesktop:text-body1
+            tablet:text-body2
+            mobile:text-body2"
+    >
+      {subtitle}
+    </p>
+  </div>
+</div>
+
+<script>
+  const microblog = document.getElementById("{id}");
+
+  microblog.addEventListener("click", () => {
+    window.location.href = `/microblog/${id}/`;
+  });
+</script>
+
+<style></style>
