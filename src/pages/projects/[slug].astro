@@ -20,6 +20,7 @@ interface Props {
   project: CollectionEntry<"projects">;
 }
 
+export const prerender = true
 const { project } = Astro.props;
 const { Content, headings } = await project.render();
 
