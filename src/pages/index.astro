@@ -17,7 +17,7 @@ import CHIAIcon from "../assets/chia/chiaIcon.svg";
 import { Meteors } from "../components/magicui/meteors";
 ---
 
-<Layout title="Alan Christian">
+<Layout title="Alan Christian | Home">
   <main class="common-container noise-bg">
     <!-- Hero section -->
     <section
@@ -109,6 +109,7 @@ import { Meteors } from "../components/magicui/meteors";
           subtitle="Cowrite's placeholder"
           image={CowriteCover}
           icon={CowriteIcon}
+          category="UX & Frontend"
         />
         <Project
           id="furhat"
@@ -116,6 +117,7 @@ import { Meteors } from "../components/magicui/meteors";
           subtitle="Furhat's placeholder"
           image={FurhatCover}
           icon={FurhatIcon}
+          category="UX"
         />
         <Project
           id="dropdown"
@@ -123,6 +125,7 @@ import { Meteors } from "../components/magicui/meteors";
           subtitle="Drop Down placeholder"
           image={DropDownCover}
           icon={DropDownIcon}
+          category="Design component"
         />
         <Project
           title="CHIA"
@@ -130,9 +133,10 @@ import { Meteors } from "../components/magicui/meteors";
           subtitle="Cowrite's placeholder"
           image={CHIACover}
           icon={CHIAIcon}
+          category="Graphic design"
         />
 
-<!--         
+        <!--         
         <Project
           title="Charlie"
           subtitle="Cowrite's placeholder"
@@ -163,16 +167,22 @@ import { Meteors } from "../components/magicui/meteors";
         smalldesktop:flex smalldesktop:flex-col smalldesktop:items-center smalldesktop:justify-center smalldesktop:gap-10
         desktop:flex-col desktop:flex desktop:items-center desktop:justify-center desktop:gap-20"
       >
-        <Meteors 
-        client:load
-        className="absolute -z-10" 
-        number={15} 
-        minDelay={0.1} 
-        maxDelay={1.2} 
-        minDuration={2} 
-        maxDuration={10} 
-        angle={215} />
-
+        <div class="absolute inset-0 w-full -z-10">
+          <div class="arora-container">
+            <div class="arora-item"></div>
+            <div class="arora-item"></div>
+            <div class="arora-item"></div>
+          </div>
+          <Meteors
+            client:load
+            number={15}
+            minDelay={0.1}
+            maxDelay={1.2}
+            minDuration={2}
+            maxDuration={10}
+            angle={215}
+          />
+        </div>
         <h1
           class="text-theme-text font-playfair font-thin
           desktop:text-title2 desktop:text-left

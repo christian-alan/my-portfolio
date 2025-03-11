@@ -1,2 +1,1 @@
-/// <reference path="../.astro/types.d.ts" />
-/// <reference types="astro/client" />
+ BLOB_READ_WRITE_TOKEN="vercel_blob_rw_jDOYI4cQvdfVPjhV_hLQjBIT561O2raQfvv2jmVy8VTxmuZ"

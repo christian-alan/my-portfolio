@@ -3,20 +3,23 @@ import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import { Image } from "astro:assets";
 import Experience from "../components/about/Experience.astro";
-import SRM from "../assets/about/SRM.png";
-import UU from "../assets/about/Uppsalauniversity.png";
+import SRM from "../assets/about/SRM.jpg";
+import UU from "../assets/about/Uppsala.jpg";
 import Cowrite from "../assets/about/Cowrite.png";
 import Deloite from "../assets/about/Deloitte.png";
 import Lokaalt from "../assets/about/Lokaalt.png";
 import Surboard from "../assets/about/Surfboard.png";
 import Skills from "../components/about/Skills.astro";
-import PyTorch from "../assets/about/PyTorch.png";
-import Scikit from "../assets/about/Scikitlearn.png";
-import OpenCV from "../assets/about/OpenCV.png";
-import HuggingFace from "../assets/about/HuggingFace.png";
 import TableOfContents from "../components/TableOfContents.astro";
-import Button from "../components/Button.astro";
-import MaggieAppleton from "../assets/about/maggie.png";
+import AlanChristian from "../assets/about/AlHeadshot.jpg";
+
+import { list } from "@vercel/blob";
+
+import figma from "../assets/about/Figma.png";
+import react from "../assets/about/React.png";
+import vue from "../assets/about/Vue.png";
+import astro from "../assets/about/Astro.png";
+import firebase from "../assets/about/Firebase.png";
 
 const navigationItems = [
   { slug: "overview", text: "Overview" },
@@ -26,9 +29,15 @@ const navigationItems = [
   { slug: "skills", text: "Skills" },
   { slug: "languages", text: "Languages" },
 ];
+
+const options = {
+  token: import.meta.env.BLOB_READ_WRITE_TOKEN,
+};
+const response = await list(options);
+const downloadableURL = response.blobs[0].downloadUrl;
 ---
 
-<Layout title="Alan Christian ">
+<Layout title="Alan Christian | About">
   <main class="common-container noise-bg text-theme-text">
     <div
       class="desktop:pt-60 desktop:pb-44 desktop:grid desktop:grid-cols-2 desktop:gap-20
@@ -243,18 +252,16 @@ const navigationItems = [
             Skills
           </h1>
           <div class="flex flex-col gap-4">
-            <p class="text-title4 font-DM font-bold">AI/ML</p>
+            <p class="text-title4 font-DM font-bold">
+              UX Research Methodologies
+            </p>
             <div
               class="grid desktop:grid-cols-4 smalldesktop:grid-cols-4 tablet:grid-cols-4 mobile:grid-cols-2 gap-4"
             >
-              <Skills classes="w-40 h-32" image={PyTorch} title="PyTorch" />
-              <Skills classes="w-40 h-32" image={Scikit} title="Scikit-learn" />
-              <Skills classes="w-40 h-32" image={OpenCV} title="Open CV" />
-              <Skills
-                classes="w-40 h-32"
-                image={HuggingFace}
-                title="Hugging Face"
-              />
+              <Skills title="Surveys" />
+              <Skills title="Qualitative Interviews" />
+              <Skills title="Statistical Analysis" />
+              <Skills title="Contextual Inquiry" />
             </div>
           </div>
 
@@ -275,11 +282,11 @@ const navigationItems = [
             <div
               class="grid desktop:grid-cols-4 smalldesktop:grid-cols-4 tablet:grid-cols-4 mobile:grid-cols-2 gap-4"
             >
-              <Skills classes="w-40 h-32" image={PyTorch} title="Astro" />
-              <Skills classes="w-40 h-32" image={Scikit} title="Vue" />
-              <Skills classes="w-40 h-32" image={OpenCV} title="React" />
-              <Skills classes="w-40 h-32" image={HuggingFace} title="GCP" />
-              <Skills classes="w-40 h-32" image={HuggingFace} title="Figma" />
+              <Skills classes="w-40 h-32" image={astro} title="Astro" />
+              <Skills classes="w-40 h-32" image={vue} title="Vue" />
+              <Skills classes="w-40 h-32" image={react} title="React" />
+              <Skills classes="w-40 h-32" image={firebase} title="GCP" />
+              <Skills classes="w-40 h-32" image={figma} title="Figma" />
             </div>
           </div>
         </section>
@@ -312,27 +319,33 @@ const navigationItems = [
           class="sticky top-28 flex flex-col gap-5"
           style="height: fit-content;"
         >
-          <Image src={MaggieAppleton} alt="Profile image" />
+          <Image src={AlanChristian} alt="Profile image" />
 
           <div class="flex flex-col gap-4">
-            <div class="flex flex-row gap-4">
-              <Button label="Download CV" className="w-full" />
-              <Button label="Download Resume" className="w-full" />
-            </div>
+            <div id="download-cv" class="flex flex-row gap-4">
+              <a class="w-full bg-teal hover:scale-105 transition-all duration-300 text-light text-center text-body2 font-DM p-4 dark:bg-gray"
+                href={downloadableURL}
+              >
+                Download my full CV
+              <a/>
 
-            <div
-              class="desktop:block smalldesktop:block tablet:block mobile:hidden"
-            >
-              <TableOfContents items={navigationItems} />
             </div>
+          </div>
+
+          <div
+            class="desktop:block smalldesktop:block tablet:block mobile:hidden"
+          >
+            <TableOfContents items={navigationItems} />
           </div>
         </div>
       </div>
     </div>
     <div class="divider my-16"></div>
-    <Footer />
+  <Footer />
   </main>
+  
 </Layout>
+
 <style>
   div ul {
     list-style-type: none;

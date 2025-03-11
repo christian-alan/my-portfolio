@@ -4,12 +4,11 @@ const { title, subtitle, image, location, dates, thesis } = Astro.props;
 ---
 
 <div class="flex flex-row justify-between gap-4 text-theme-text">
-  <div class="flex flex-row gap-3">
-    <Image width={60} height={60} src={image} alt="Experience" />
+  <div id="image-container" class="flex flex-row gap-3">
+    <Image width="60" height="60" src={image} fit="cover" alt="Experience" />
     <div>
       {title && <h1 class="font-DM text-body2 font-bold">{title}</h1>}
       {subtitle && <p class="text-body2 font-DM ">{subtitle}</p>}
-
       {
         thesis && (
           <p class="text-body2 font-DM opacity-70">
@@ -25,3 +24,11 @@ const { title, subtitle, image, location, dates, thesis } = Astro.props;
     <p class="whitespace-nowrap text-body2">{dates}</p>
   </div>
 </div>
+
+<style>
+  #image-container img {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: cover;
+  }
+</style>

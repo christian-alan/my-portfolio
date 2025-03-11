@@ -111,6 +111,7 @@ export default {
     		white: '#FFFFFF',
     		gray: '#595453',
     		black: '#000000',
+			'skills-bg':'hsl(var(--color-skills-bg)/<alpha-value>)',
     		bkg: 'hsl(var(--color-bg)/<alpha-value>)',
     		'theme-btn': 'hsl(var(--color-theme-btn)/<alpha-value>)',
     		'theme-text': 'hsl(var(--color-theme-text)/<alpha-value>)'
@@ -161,12 +162,18 @@ export default {
     				'3': 'hsl(var(--chart-3))',
     				'4': 'hsl(var(--chart-4))',
     				'5': 'hsl(var(--chart-5))'
-    			}
+    			},
+    			'color-1': 'hsl(var(--color-1))',
+    			'color-2': 'hsl(var(--color-2))',
+    			'color-3': 'hsl(var(--color-3))',
+    			'color-4': 'hsl(var(--color-4))',
+    			'color-5': 'hsl(var(--color-5))'
     		},
     		animation: {
     			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
     			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
-    			meteor: 'meteor 5s linear infinite'
+    			meteor: 'meteor 5s linear infinite',
+    			rainbow: 'rainbow var(--speed, 2s) infinite linear'
     		},
     		keyframes: {
     			'shimmer-slide': {
@@ -199,6 +206,14 @@ export default {
     				'100%': {
     					transform: 'rotate(var(--angle)) translateX(-500px)',
     					opacity: '0'
+    				}
+    			},
+    			rainbow: {
+    				'0%': {
+    					'background-position': '0%'
+    				},
+    				'100%': {
+    					'background-position': '200%'
     				}
     			}
     		}
