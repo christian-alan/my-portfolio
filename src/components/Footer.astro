@@ -9,7 +9,6 @@ const options = {
 const response = await list(options);
 const downloadableURL = response.blobs[0].downloadUrl;
 
-
 const resumeLink =
   "https://drive.google.com/file/d/14bNyYYbjFtiCrKHA45TV7wMTLmlEBkbb/view?usp=sharing";
 const linkedInLink = "https://www.linkedin.com/in/alan-christian-955327159/";
@@ -39,17 +38,35 @@ const linkedInLink = "https://www.linkedin.com/in/alan-christian-955327159/";
 
       <!-- Links -->
       <ul class="grid grid-cols-2 mt-10 gap-5 opacity-80 text-theme-text">
-        <li><a class="text-body2 hover:underline transition-all duration-300" href="/">Design</a></li>
         <li>
-          <a href="/publications/" class="text-body2 hover:underline transition-all duration-300">Research</a>
+          <a
+            class="text-body2 hover:underline hover:font-bold transition-all duration-300"
+            href="/">Design</a>
         </li>
-        <li><a class="text-body2 hover:underline transition-all duration-300" href="/about/">About</a></li>
+        <li>
+          <a
+            href="/publications/"
+            class="text-body2 hover:underline hover:font-bold transition-all duration-300"
+            >Research</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-body2 hover:underline hover:font-bold transition-all duration-300"
+            href="/about/">About</a>
+        </li>
 
         <li>
-          <a class="text-body2 hover:underline transition-all duration-300" href={linkedInLink}>LinkedIn</a>
+          <a
+            class="text-body2 hover:underline hover:font-bold transition-all duration-300"
+            href={linkedInLink}>LinkedIn</a
+          >
         </li>
         <li>
-          <a class="text-body2 hover:underline transition-all duration-300" href={downloadableURL}>Full CV</a>
+          <a
+            class="text-body2 hover:underline hover:font-bold transition-all duration-300"
+            href={downloadableURL}>Full CV</a
+          >
         </li>
       </ul>
     </div>

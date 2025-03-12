@@ -16,6 +16,7 @@ interface Props {
   microblog: CollectionEntry<"microblogs">;
 }
 
+export const prerender = true
 const { microblog } = Astro.props;
 const { Content } = await microblog.render();
 ---
