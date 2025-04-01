@@ -7,23 +7,15 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  build:{
-    rollupOptions:{
-      external:[
-
-      ]
-    }
-  },
-
   integrations: [tailwind(), mdx(), react()],
   devToolbar: {
     enabled: false,
   },
-  output:'server',
-  adapter:vercelServerless(),
-  env:{
-    schema:{
-      BLOB_READ_WRITE_TOKEN: envField.string({context:'server',access:'secret'})
+  output: 'server',
+  adapter: vercelServerless(),
+  env: {
+    schema: {
+      BLOB_READ_WRITE_TOKEN: envField.string({ context: 'server', access: 'secret' })
     }
   }
 });
